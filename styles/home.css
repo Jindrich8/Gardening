@@ -1,0 +1,73 @@
+a.btn {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 1rem;
+    border: 0.15rem solid var(--primary-bg-color);
+    border-radius: 50%;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-c-color);
+}
+
+.btn:hover {
+    translate: 0.1rem 0.1rem;
+}
+
+
+
+#hero {
+    height: 75vh;
+
+}
+
+#hero-text {
+    display: flex;
+    color: var(--primary-c-color);
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    margin: auto;
+    flex-direction: column;
+    width: fit-content;
+}
+
+#hero-text .btn {
+    width: fit-content;
+}
+
+
+
+#services ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#services li {
+    flex-grow: 1;
+    flex-shrink: 1;
+    max-width: 25rem;
+}
+
+#services li h3 {
+    text-align: center;
+}
+
+#services li div {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+#services li div p {
+    flex-shrink: 5;
+}
+
+#services li div img {
+    height: min-content;
+    flex-grow: 1;
+    flex-basis: 3rem;
+    padding: 0.5rem 1rem;
+    width: auto;
+}

@@ -1,0 +1,28 @@
+ body,
+ ul,
+ li,
+ p,
+ iframe,
+ img,
+ section,
+ div,
+ header,
+ footer {
+     margin: 0px;
+     padding: 0px;
+ }
+
+ ul {
+     text-decoration: none;
+     list-style-type: none;
+ }
+
+ img {
+     all: inherit;
+     overflow: hidden;
+ }
+
+ nav a {
+     color: inherit;
+     text-decoration: none;
+ }
