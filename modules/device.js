@@ -1,4 +1,4 @@
-const mobileMedia = window.matchMedia("only screen and (max-width: 600px)");
+const mobileMedia = window.matchMedia("only screen and (max-width: 700px)");
 const uniqueObservers = new Map();
 
 mobileMedia.addEventListener('change', (e) => {

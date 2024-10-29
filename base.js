@@ -71,7 +71,7 @@ const handleDropdownClose = () => {
 };
 
 function dropdownShouldStayOpen(e) {
-    e instanceof HTMLElement && (e === document.activeElement || !device.isMobile && e.matches(':hover'))
+    e instanceof HTMLElement && (e === document.activeElement || !device.isMobile() && e.matches(':hover'))
 }
 
 
@@ -124,7 +124,7 @@ const registerDropdown = (e) => {
         const options = getOptions(state);
         state.callback = createCallback(() => openCallback(state));
         state.e.addEventListener('focus', state.callback, options);
-        if (!device.isMobile) {
+        if (!device.isMobile()) {
             state.e.addEventListener('mouseenter', state.callback, options);
         }
     }
@@ -134,7 +134,7 @@ const registerDropdown = (e) => {
         const options = getOptions(state);
         state.callback = createCallback(() => closeCallback(state));
         state.e.addEventListener('blur', state.callback, options);
-        if (!device.isMobile) {
+        if (!device.isMobile()) {
             state.e.addEventListener('mouseleave', state.callback, options);
         }
 
