@@ -8,8 +8,8 @@
  div,
  header,
  footer {
-     margin: 0px;
-     padding: 0px;
+     margin: 0;
+     padding: 0;
  }
 
  ul {
@@ -18,8 +18,9 @@
  }
 
  img {
-     all: inherit;
-     overflow: hidden;
+     width: inherit;
+     height: inherit;
+     padding: 0;
  }
 
  nav a {
