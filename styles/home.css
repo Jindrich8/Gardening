@@ -1,3 +1,18 @@
+:root {
+    --service-max-width: 25rem;
+    --services-max-columns: 2;
+}
+
+#content {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 0 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100vw;
+}
+
+
 a.btn {
     text-decoration: none;
 }
@@ -36,38 +51,64 @@ a.btn {
     width: fit-content;
 }
 
-
-
 #services ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    max-width: calc(var(--service-max-width)*(var(--services-max-columns) + 1));
+    width: 100%;
+    margin: 0 auto;
 }
 
 #services li {
+    flex-basis: 50%;
     flex-grow: 1;
     flex-shrink: 1;
-    max-width: 25rem;
+    box-sizing: border-box;
+    max-width: var(--service-max-width);
 }
 
 #services li h3 {
     text-align: center;
 }
 
-#services li div {
+#services .service {
     display: flex;
     flex-direction: row;
-    align-items: stretch;
+    flex-wrap: wrap;
+    text-align: center;
+    text-wrap: balance;
+    gap: 0.5rem;
 }
 
-#services li div p {
-    flex-shrink: 5;
+#services .service .text {
+    min-width: 10rem;
+    max-width: 15rem;
 }
 
-#services li div img {
-    height: min-content;
-    flex-grow: 1;
-    flex-basis: 3rem;
-    padding: 0.5rem 1rem;
-    width: auto;
+#services li .service .img-container {
+    margin: 0 auto;
+}
+
+#services li .service .img-container img {
+    height: 7lh;
+    width: 7lh;
+    object-fit: cover;
+    object-position: center;
+}
+
+section .header {
+    text-align: center;
+}
+
+.text {
+    height: max-content;
+    margin: auto;
+    max-width: 50rem;
+}
+
+section:not(:last-of-type) {
+    margin-bottom: 6rem;
 }
