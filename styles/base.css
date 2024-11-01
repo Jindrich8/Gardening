@@ -20,7 +20,7 @@ svg:has(use) {
     width: 100%;
 }
 
-.location_address {
+.location-address {
     font-style: italic;
 }
 
@@ -82,7 +82,7 @@ header {
 }
 
 #logo-item {
-    margin: 1rem 5rem 1rem 1rem;
+    margin: 1rem;
 }
 
 header nav::before {
@@ -118,7 +118,7 @@ body.scrolled header nav::before {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("/resources/hero.webp");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../resources/hero.webp");
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
@@ -176,7 +176,7 @@ footer address {
 /*#region dropdown*/
 
 
-.dropdown {
+.js-dropdown {
     display: flex;
     flex-direction: row;
     position: relative;
@@ -187,7 +187,7 @@ footer address {
     color: inherit;
 }
 
-.dropdown_menu {
+.dropdown-menu {
     flex-direction: column;
     visibility: hidden;
     position: absolute;
@@ -203,7 +203,7 @@ footer address {
     transition: transform 0.2s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s;
 }
 
-.dropdown.up .dropdown_menu {
+.js-dropdown.up .dropdown-menu {
     top: auto;
     flex-direction: column-reverse;
     bottom: calc(100% - 0.75rem);
@@ -212,13 +212,13 @@ footer address {
 }
 
 
-.dropdown_menu li:is(:hover, :focus) {
+.dropdown-menu li:is(:hover, :focus) {
     background-color: var(--hover-secondary-bg-color);
 }
 
 
 
-:is(.dropdown.open, body:not([data-js]) .dropdown:is(:hover, :focus-within)) .dropdown_menu {
+:is(.js-dropdown.open, body:not([data-js]) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
     display: flex;
     transform: rotate(0deg) translateX(50%);
     visibility: visible;
@@ -226,7 +226,7 @@ footer address {
     opacity: 1;
 }
 
-button.dropdown_btn {
+button.js-dropdown-btn {
     text-decoration: none;
     text-align: center;
     display: inline-block;
@@ -263,14 +263,14 @@ button.dropdown_btn {
         width: 5em;
     }
 
-    header .dropdown {
+    header .js-dropdown {
         display: flex;
         flex-direction: column;
         position: relative;
         align-items: center;
     }
 
-    header .dropdown_menu {
+    header .dropdown-menu {
         display: none;
         visibility: hidden;
         transform: none;
@@ -280,11 +280,11 @@ button.dropdown_btn {
         color: inherit;
     }
 
-    header .dropdown_menu li:hover {
+    header .dropdown-menu li:hover {
         background-color: transparent;
     }
 
-    header :is(.dropdown.open, body:not([data-js]) .dropdown:is(:hover, :focus-within)) .dropdown_menu {
+    header :is(.js-dropdown.open, body:not([data-js]) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
         display: flex;
         visibility: visible;
         transform: none;
@@ -310,6 +310,16 @@ button.dropdown_btn {
 
     header nav {
         height: var(--mobile-nav-height);
+    }
+
+    footer {
+        padding: 1rem;
+    }
+
+    footer nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin: 1rem 0;
     }
 
 

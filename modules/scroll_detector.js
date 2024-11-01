@@ -1,4 +1,4 @@
-import { once_event_listener_options as once_options } from "./utils.js";
+import { onceEventListenerOptions as onceOptions } from "./utils.js";
 const scrollEndOptions = {
     once: false,
     passive: true,
@@ -12,7 +12,7 @@ function handleScroll() {
 function scrollEndCallback(e) {
     handleScroll();
     if (window.scrollY === 0) {
-        window.addEventListener('scroll', scrollCallback, once_options);
+        window.addEventListener('scroll', scrollCallback, onceOptions);
         window.removeEventListener('scrollend', scrollEndCallback, scrollEndOptions);
     }
 }
@@ -23,4 +23,4 @@ function scrollCallback(e) {
 }
 
 handleScroll();
-window.addEventListener('scroll', scrollCallback, once_options);
+window.addEventListener('scroll', scrollCallback, onceOptions);

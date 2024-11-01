@@ -32,16 +32,17 @@
                 <ul id="main-menu">
                     <li><a class="current" href="/">Domů</a></li>
                     <li><a href="./aboutUs.html">O nás</a></li>
-                    <li class="dropdown">
-                        <button type="button" class="dropdown_btn"
+                    <li class="js-dropdown" data-js-all-href="./services.html">
+                        <button type="button" class="js-dropdown-btn"
                             aria-controls="header-our-services-dropdown-menu">Naše služby<span
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                        <ul class="dropdown_menu" id="header-our-services-dropdown-menu">
-                            <li><a href="./services.html">Naše služby</a></li>
-                            <li><a href="./services.html">Naše služby</a></li>
-                            <li><a href="./services.html">Naše služby</a></li>
-                            <li><a href="./services.html">Naše služby</a></li>
+                        <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
+                            <li><a href="./services.html">Všechny služby</a></li>
+                            <li><a href="./services.html">Naše služby A</a></li>
+                            <li><a href="./services.html">Naše služby B</a></li>
+                            <li><a href="./services.html">Naše služby C</a></li>
+                            <li><a href="./services.html">Naše služby D</a></li>
                         </ul>
                     </li>
                     <li><a href="./priceList.html">Ceník</a></li>
@@ -61,31 +62,67 @@
             </div>
             <div id="content">
                 <section id="services">
-                    <h2>Služby</h2>
+                    <h2 class="header">Služby</h2>
                     <ul>
                         <li>
+
                             <h3>Tvarování keřů</h3>
-                            <div>
-                                <img src="/resources/scissors.svg">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                    reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci,
-                                    ipsam
-                                    fugiat fugit voluptatem error. Officiis, nobis.</p>
+                            <div class="service">
+                                <div class="img-container">
+                                    <img src="./resources/shorn-single-hedge.jpg">
+                                </div>
+                                <p class="text">Dopřejte své zahradě elegantní vzhled s naším profesionálním tvarováním
+                                    keřů. Precizní střih a cit pro detail promění
+                                    každý keř v harmonický prvek vaší zahrady.</p>
                             </div>
                         </li>
                         <li>
                             <h3>Roubování stromů</h3>
-                            <img>
-                            <p></p>
+                            <div class="service">
+                                <div class="img-container">
+                                    <img src="./resources/graft.jpg">
+                                </div>
+                                <p class="text">Specializujeme se na roubování ovocných a okrasných stromů. Pomůžeme vám
+                                    udržet staré stromy nebo vypěstovat nové odrůdy
+                                    na vašem pozemku.</p>
+                            </div>
                         </li>
                         <li>
                             <h3>Prořezávání stromů</h3>
-                            <img>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci, ipsam
-                                fugiat fugit voluptatem error. Officiis, nobis.</p>
+                            <div class="service">
+                                <div class="img-container">
+                                    <img src="./resources/chainsaw.jpg">
+                                </div>
+                                <p class="text">Udržujte své stromy zdravé a krásné díky našemu odbornému prořezávání.
+                                    Bezpečně odstraníme přebytečné větve a podpoříme
+                                    růst stromů v jejich přirozeném tvaru.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <h3>Osázení zahrady</h3>
+                            <div class="service">
+                                <div class="img-container">
+                                    <img src="./resources/pepper.jpg">
+                                </div>
+                                <p class="text">Pomůžeme vám vytvořit nádherné záhony a výsadby přesně podle vašich
+                                    představ. Ať už chcete záplavu květin nebo zelené
+                                    oázy, máme pro vás řešení.</p>
+                            </div>
                         </li>
                     </ul>
+                </section>
+                <section id="aboutUs">
+                    <h2 class="header">O nás</h2>
+                    <p class="text">
+                        Gardenio je tým nadšených zahradníků, kteří proměňují zahrady v oázy klidu a krásy. Naše
+                        zkušenosti, cit pro detail a
+                        osobní přístup zajišťují, že každá zahrada dostane tu nejlepší péči. Společně tvoříme zelená
+                        místa, kde můžete relaxovat
+                        a být blízko přírodě.</p>
+                </section>
+                <section>
+                    <h2 class="header">Naše projekty</h2>
+
                 </section>
             </div>
         </main>
@@ -97,12 +134,13 @@
                 <nav>
                     <ul>
                         <li><a href="./aboutUs.html">O nás</a></li>
-                        <li class="dropdown up">
-                            <button type="button" class="dropdown_btn" aria-expanded="false"
+                        <li class="js-dropdown up" data-js-all-href="./services.html">
+                            <button type="button" class="js-dropdown-btn" aria-expanded="false"
                                 aria-controls="footer-our-services-dropdown-menu"><span>Naše služby</span><span
                                     class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                            <ul class="dropdown_menu" id="footer-our-services-dropdown-menu">
+                            <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
+                                <li><a href="./services.html">Všechny služby</a></li>
                                 <li><a href="./services.html">Naše služby A</a></li>
                                 <li><a href="./services.html">Naše služby B</a></li>
                                 <li><a href="./services.html">Naše služby C</a></li>
@@ -117,7 +155,7 @@
                 <address>
                     <a href="mailto:info@gardenio.cz">info@gardenio.cz</a>
                     <a href="tel:+420123456789">+420 123 456 789</a>
-                    <span class="location_address">Hlaváčova 14, 530 02 Pardubice</span>
+                    <span class="location-address">Hlaváčova 14, 530 02 Pardubice</span>
                 </address>
 
                 <div>
