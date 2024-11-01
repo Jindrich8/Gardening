@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-
+    <link rel="stylesheet" href="styles/contact.css">
+    <link href="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone.css" rel="stylesheet" type="text/css" />
     <title>Zahradnické služby Gardenio</title>
 </head>
 
@@ -33,11 +33,11 @@
                     <li><a class="current" href="/">Domů</a></li>
                     <li><a href="./aboutUs.html">O nás</a></li>
                     <li class="dropdown">
-                        <button type="button" class="dropdown_btn"
+                        <button type="button" class="js-dropdown-btn"
                             aria-controls="header-our-services-dropdown-menu">Naše služby<span
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                        <ul class="dropdown_menu" id="header-our-services-dropdown-menu">
+                        <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
                             <li><a href="./services.html">Naše služby</a></li>
                             <li><a href="./services.html">Naše služby</a></li>
                             <li><a href="./services.html">Naše služby</a></li>
@@ -52,40 +52,90 @@
         <main>
             <div id="hero">
                 <div id="text">
-                    <h1 id="hero-text"><span>Gardenio</span> <span>zahradnické</span> <a href="./services.html"
-                            class="btn" id="services-btn">služby</a>
-                        <span>Pardubice a okolí</span>
-                    </h1>
+                    <h1>Kontakt</h1>
                 </div>
 
             </div>
             <div id="content">
-                <section id="services">
-                    <h2>Služby</h2>
-                    <ul>
-                        <li>
-                            <h3>Tvarování keřů</h3>
-                            <div>
-                                <img src="/resources/scissors.svg">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                    reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci,
-                                    ipsam
-                                    fugiat fugit voluptatem error. Officiis, nobis.</p>
+                <section class="contacts-section">
+                    <h2 class="header">Kontaktní údaje</h2>
+                    <div class="container">
+                        <div class="contacts">
+                            <address>
+                                <span class="label">Telefon: </span>
+                                <a href="tel:+420123456789">+420 123 456
+                                    789</a>
+
+                                <span class="label">Email: </span>
+                                <a href="mailto:info@gardenio.cz">info@gardenio.cz</a>
+
+                                <span class="label">Adresa: </span>
+                                <span class="location-address">Hlaváčova 14,
+                                    530 02 Pardubice</span>
+                            </address>
+                            <div class="open-hours">
+                                <h3 class="header">Otevírací doba</h2>
+                                    <div class="container">
+                                        <span>Pondělí: </span><span>9:00 - 15:00</span>
+                                        <span>Úterý: </span><span>9:00 - 15:00</span>
+                                        <span>Středa: </span><span>9:00 - 15:00</span>
+                                        <span>Čtvrtek: </span><span>9:00 - 15:00</span>
+                                        <span>Pátek: </span><span>9:00 - 15:00</span>
+                                    </div>
                             </div>
-                        </li>
-                        <li>
-                            <h3>Roubování stromů</h3>
-                            <img>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h3>Prořezávání stromů</h3>
-                            <img>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci, ipsam
-                                fugiat fugit voluptatem error. Officiis, nobis.</p>
-                        </li>
-                    </ul>
+                        </div>
+                        <div class="map-container">
+                            <iframe class="map" src="https://frame.mapy.cz/s/nusabobura" frameborder="0"></iframe>
+                        </div>
+                    </div>
+                </section>
+                <section class="contacts-form-section">
+                    <h2 class="header">Kontaktní formulář</h2>
+                    <div class="form-wrapper">
+                        <form class="contact-form" method="post" action="#">
+                            <div class="row">
+                                <div class="field">
+                                    <label for="c-form-email">Email:</label>
+                                    <input type="email" id="c-form-email" required placeholder=" " />
+                                </div>
+                                <div class="field">
+                                    <label for="c-form-name">Jméno:</label>
+                                    <input type="email" id="c-form-name" placeholder=" " />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="field">
+                                    <label for="c-form-tel">Telefon:</label>
+                                    <input type="tel" id="c-form-tel" placeholder=" " />
+                                </div>
+                                <div class="field">
+                                    <label for="c-form-subject">Předmět:</label>
+                                    <input type="text" id="c-form-subject" required placeholder=" " />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="field">
+                                    <label for="c-form-text">Text:</label>
+                                    <textarea id="c-form-text" required placeholder=" "></textarea>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="field">
+                                    <label for="c-form-attachements">Přílohy:</label>
+                                    <div class="file-input dropzone" data-name="files">
+                                        <div class="fallback">
+                                            <input id="c-form-attachements" type="file" placeholder="Vyber soubor..."
+                                                multiple />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-controls">
+                                <input type="submit" class="btn" value="Odeslat" />
+                                <input type="reset" class="btn" value="Resetovat" />
+                            </div>
+                        </form>
+                    </div>
                 </section>
             </div>
         </main>
@@ -98,11 +148,11 @@
                     <ul>
                         <li><a href="./aboutUs.html">O nás</a></li>
                         <li class="dropdown">
-                            <button type="button" class="dropdown_btn" aria-expanded="false"
+                            <button type="button" class="js-dropdown-btn" aria-expanded="false"
                                 aria-controls="footer-our-services-dropdown-menu"><span>Naše služby</span><span
                                     class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                            <ul class="dropdown_menu" id="footer-our-services-dropdown-menu">
+                            <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
                                 <li><a href="./services.html">Naše služby</a></li>
                                 <li><a href="./services.html">Naše služby</a></li>
                                 <li><a href="./services.html">Naše služby</a></li>
@@ -126,6 +176,9 @@
         </footer>
     </div>
     <script type="module" src="base.js"></script>
+    <script src="https://unpkg.com/dropzone@6.0.0-beta.1/dist/dropzone-min.js"></script>
+    <script type="module" src="modules/drop_zone.js"></script>
+
 </body>
 
 </html>

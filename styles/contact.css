@@ -1,0 +1,199 @@
+:root {
+    --form-input-border-size: 1px;
+    --form-input-padding-vertical: 0.5rem;
+    --form-submit-btn-bg-color: rgb(4, 122, 4);
+    --form-submit-btn-hover-bg-color: rgb(5, 137, 5);
+    --form-submit-btn-c-color: white;
+    --form-reset-btn-bg-color: rgb(197, 4, 4);
+    --form-reset-btn-hover-bg-color: rgb(206, 21, 21);
+    --form-reset-btn-c-color: white;
+}
+
+.btn:hover {
+    translate: 0.1rem 0.1rem;
+    cursor: pointer;
+}
+
+#content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+main address {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    justify-items: baseline;
+    gap: 0.75rem;
+    margin: 0 auto;
+}
+
+.drop-zone {
+    height: 10rem;
+    width: 100%;
+}
+
+.open-hours .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts-section {
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+}
+
+
+.header {
+    text-align: center;
+}
+
+.contacts-section .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    row-gap: 1rem;
+}
+
+.contacts-section :is(.map-container, .contacts) {
+    flex-grow: 1;
+}
+
+.map {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 40/28;
+}
+
+.contacts-section .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.open-hours .container {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    margin: 0 auto;
+    text-align: center;
+    gap: 0.75rem;
+    justify-content: center;
+
+}
+
+/*#region Contact form*/
+form.contact-form {
+    display: flex;
+    flex-direction: column;
+    font-size: larger;
+}
+
+form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-content: stretch;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+form textarea {
+    resize: vertical;
+    min-height: 5lh;
+}
+
+form .field :is(input, textarea) {
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-width: var(--form-input-border-size);
+    padding: var(--form-input-padding-vertical);
+    border-radius: 0.6rem;
+    font-size: inherit;
+    max-width: 100%;
+}
+
+form .contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+form .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    max-width: 100%;
+}
+
+.form-wrapper {
+    max-width: 90ch;
+    margin: 0 auto;
+}
+
+form .field label {
+    margin-left: 0.75rem;
+    transition: transform 0.1s ease-in;
+}
+
+form .field:has(:is(input, textarea)[required]) label::before {
+    content: "* ";
+    color: red;
+}
+
+form .field:has(*:placeholder-shown) label {
+    position: relative;
+    transform: translateY(calc(1lh + var(--form-input-padding-vertical) + var(--form-input-border-size)));
+    width: fit-content;
+    cursor: pointer;
+}
+
+
+form .field:has(*:focus) label {
+    position: relative;
+    color: green;
+    transform: translateY(0);
+    cursor: initial;
+}
+
+.form-controls {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.form-controls input {
+    padding: 1rem;
+    border: 0;
+    border-radius: 35rem;
+    font-weight: bolder;
+    flex-shrink: 1;
+    flex-grow: 1;
+    flex-basis: 5rem;
+    max-width: 10rem;
+}
+
+.form-controls input[type="submit"] {
+    background-color: var(--form-submit-btn-bg-color);
+    color: var(--form-submit-btn-c-color);
+}
+
+.form-controls input[type="submit"]:hover {
+    background-color: var(--form-submit-btn-hover-bg-color);
+}
+
+.form-controls input[type="reset"] {
+    background-color: var(--form-reset-btn-bg-color);
+    color: var(--form-reset-btn-c-color);
+}
+
+.form-controls input[type="reset"]:hover {
+    background-color: var(--form-reset-btn-hover-bg-color);
+}
+
+/*#endregion Contact form*/
