@@ -56,21 +56,34 @@ a.btn {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    gap: 1rem;
-    max-width: calc(var(--service-max-width)*(var(--services-max-columns) + 1));
     width: 100%;
     margin: 0 auto;
+    gap: 1rem;
 }
 
-#services li {
-    flex-basis: 50%;
+
+#services .row-wrapper {
+    flex-grow: 1;
+}
+
+
+#services .row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.service-item {
     flex-grow: 1;
     flex-shrink: 1;
     box-sizing: border-box;
     max-width: var(--service-max-width);
 }
 
-#services li h3 {
+.service-item h3 {
     text-align: center;
 }
 
@@ -88,11 +101,11 @@ a.btn {
     max-width: 15rem;
 }
 
-#services li .service .img-container {
+.service-item .service .img-container {
     margin: 0 auto;
 }
 
-#services li .service .img-container img {
+.service-item .service .img-container img {
     height: 7lh;
     width: 7lh;
     object-fit: cover;

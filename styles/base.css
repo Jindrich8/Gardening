@@ -10,9 +10,37 @@
     --nav-bg-color: var(--primary-bg-color);
 }
 
+html {
+    scrollbar-color: rgb(7, 95, 7) white;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
+
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: min(100vh, 1369px);
+}
+
+#content {
+    margin: 2rem auto;
+    flex-grow: 1;
+    max-width: 80vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+
+#main-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: min(max(1rem, 1vw), 20rem);
 }
 
 svg:has(use) {
@@ -24,10 +52,6 @@ svg:has(use) {
     font-style: italic;
 }
 
-#content {
-    margin: 2rem auto;
-    max-width: 80vw;
-}
 
 /*#region nav*/
 nav {
@@ -100,11 +124,7 @@ header nav::before {
 }
 
 body.scrolled header nav::before {
-    position: absolute;
     opacity: 1;
-    height: 100%;
-    width: 100%;
-    content: "";
     transform: translateY(0);
     background-color: var(--nav-bg-color);
 }
@@ -218,7 +238,7 @@ footer address {
 
 
 
-:is(.js-dropdown.open, body:not([data-js]) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
+:is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
     display: flex;
     transform: rotate(0deg) translateX(50%);
     visibility: visible;
@@ -239,6 +259,22 @@ button.js-dropdown-btn {
 }
 
 /*#endregion dropdown*/
+
+@media only print {
+
+    header {
+        position: absolute;
+        contain: layout;
+    }
+
+    header nav::before {
+        opacity: 1;
+        top: -1px;
+        background-color: red;
+        transform: translateY(-50%);
+        background-color: var(--nav-bg-color);
+    }
+}
 
 
 @media only screen and (max-width: 700px) {
@@ -284,7 +320,7 @@ button.js-dropdown-btn {
         background-color: transparent;
     }
 
-    header :is(.js-dropdown.open, body:not([data-js]) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
+    header :is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
         display: flex;
         visibility: visible;
         transform: none;
@@ -314,6 +350,8 @@ button.js-dropdown-btn {
 
     footer {
         padding: 1rem;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     footer nav ul {

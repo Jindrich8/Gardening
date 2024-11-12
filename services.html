@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-
+    <link rel="stylesheet" href="styles/services.css">
     <title>Zahradnické služby Gardenio</title>
 </head>
 
@@ -33,11 +32,11 @@
                     <li><a class="current" href="/">Domů</a></li>
                     <li><a href="./aboutUs.html">O nás</a></li>
                     <li class="dropdown">
-                        <button type="button" class="dropdown_btn"
+                        <button type="button" class="js-dropdown-btn"
                             aria-controls="header-our-services-dropdown-menu">Naše služby<span
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                        <ul class="dropdown_menu" id="header-our-services-dropdown-menu">
+                        <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
                             <li><a href="./services.html">Naše služby</a></li>
                             <li><a href="./services.html">Naše služby</a></li>
                             <li><a href="./services.html">Naše služby</a></li>
@@ -52,38 +51,85 @@
         <main>
             <div id="hero">
                 <div id="text">
-                    <h1 id="hero-text"><span>Gardenio</span> <span>zahradnické</span> <a href="./services.html"
-                            class="btn" id="services-btn">služby</a>
-                        <span>Pardubice a okolí</span>
+                    <h1 id="hero-text">Naše služby
                     </h1>
                 </div>
 
             </div>
             <div id="content">
+                <p class="text">V Gardenio se zaměřujeme na kvalitní zahradnické služby, které pomohou vaší zahradě
+                    prospívat a
+                    vypadat nádherně po celý
+                    rok. Naše nabídka zahrnuje:</p>
                 <section id="services">
-                    <h2>Služby</h2>
                     <ul>
-                        <li>
-                            <h3>Tvarování keřů</h3>
-                            <div>
-                                <img src="/resources/scissors.svg">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                    reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci,
-                                    ipsam
-                                    fugiat fugit voluptatem error. Officiis, nobis.</p>
+                        <li class="service-item">
+                            <h2 class="header" id="bushes-shaping">Tvarování keřů</h2>
+                            <div class="service">
+                                <img src="./resources/trees-92222_1920.jpg" />
+                                <p class="text">
+                                    Pečlivé tvarování keřů dokáže vaší zahradě dodat upravený, elegantní vzhled. Díky
+                                    dlouholetým zkušenostem a znalostem v
+                                    oblasti zahradního designu přizpůsobíme tvar každého keře tak, aby ladil s celkovým
+                                    konceptem vaší zahrady. Naším cílem
+                                    je dosáhnout přirozené harmonie a estetiky, která podtrhne krásu rostlin a přitáhne
+                                    pozornost.
+                                </p>
+                            </div>
+
+                        </li>
+                        <li class="service-item">
+                            <h2 class="header" id="tree-pruning">Prořezávání stromů</h2>
+                            <div class="service">
+                                <img src="./resources/tree-pruning-3373997_1920.jpg" />
+                                <p class="text">
+                                    Prořezávání je klíčem ke zdraví a dlouhověkosti stromů. Naši odborníci provedou
+                                    pečlivé
+                                    odstranění přebytečných větví,
+                                    což stromům umožní lépe růst, omezí riziko lámání větví a podpoří přirozený tvar
+                                    stromu.
+                                    Prořezávání provádíme šetrně a
+                                    vždy s ohledem na konkrétní druh stromu a jeho potřeby.
+                                </p>
+
                             </div>
                         </li>
-                        <li>
-                            <h3>Roubování stromů</h3>
-                            <img>
-                            <p></p>
+                        <li class="service-item">
+                            <h2 class="header" id="garden-planting">Osázení zahrady</h2>
+                            <div class="service">
+                                <img src="./resources/marqueyssac-2154626_1920.jpg" />
+                                <p class="text">
+                                    Nabízíme kompletní výsadbu nové zahrady nebo obnovu stávající. Na základě vašich
+                                    přání a
+                                    potřeb
+                                    navrhneme a osázíme
+                                    záhony, trávníky a další části zahrady, ať už jde o květinové záhony, okrasné keře
+                                    nebo
+                                    bylinky.
+                                    S naší pomocí vytvoříte
+                                    harmonické prostředí, které bude okouzlovat svou pestrostí a přirozeným uspořádáním.
+                                </p>
+
+                            </div>
                         </li>
-                        <li>
-                            <h3>Prořezávání stromů</h3>
-                            <img>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci, ipsam
-                                fugiat fugit voluptatem error. Officiis, nobis.</p>
+                        <li class="service-item">
+                            <h2 class="header" id="grafting">Roubování</h2>
+                            <div class="service">
+                                <img src="./resources/graft.jpg" />
+                                <p class="text">
+                                    Roubování je skvělý způsob, jak rozšířit druhovou pestrost vaší zahrady nebo
+                                    zachovat
+                                    odrůdy
+                                    ovocných stromů. Naši
+                                    odborníci na roubování vám pomohou s přeroubováním stromů, vylepšením starších
+                                    dřevin či
+                                    vytvořením nových, unikátních
+                                    odrůd. Díky našim technikám bude každý roub úspěšný a váš strom dostane nové
+                                    možnosti
+                                    růstu.
+                                </p>
+
+                            </div>
                         </li>
                     </ul>
                 </section>
@@ -98,11 +144,11 @@
                     <ul>
                         <li><a href="./aboutUs.html">O nás</a></li>
                         <li class="dropdown">
-                            <button type="button" class="dropdown_btn" aria-expanded="false"
+                            <button type="button" class="js-dropdown-btn" aria-expanded="false"
                                 aria-controls="footer-our-services-dropdown-menu"><span>Naše služby</span><span
                                     class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                            <ul class="dropdown_menu" id="footer-our-services-dropdown-menu">
+                            <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
                                 <li><a href="./services.html">Naše služby</a></li>
                                 <li><a href="./services.html">Naše služby</a></li>
                                 <li><a href="./services.html">Naše služby</a></li>

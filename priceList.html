@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/home.css">
-
+    <link rel="stylesheet" href="styles/priceList.css">
     <title>Zahradnické služby Gardenio</title>
 </head>
 
@@ -33,11 +32,11 @@
                     <li><a class="current" href="/">Domů</a></li>
                     <li><a href="./aboutUs.html">O nás</a></li>
                     <li class="dropdown">
-                        <button type="button" class="dropdown_btn"
+                        <button type="button" class="js-dropdown-btn"
                             aria-controls="header-our-services-dropdown-menu">Naše služby<span
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                        <ul class="dropdown_menu" id="header-our-services-dropdown-menu">
+                        <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
                             <li><a href="./services.html">Naše služby</a></li>
                             <li><a href="./services.html">Naše služby</a></li>
                             <li><a href="./services.html">Naše služby</a></li>
@@ -52,41 +51,48 @@
         <main>
             <div id="hero">
                 <div id="text">
-                    <h1 id="hero-text"><span>Gardenio</span> <span>zahradnické</span> <a href="./services.html"
-                            class="btn" id="services-btn">služby</a>
-                        <span>Pardubice a okolí</span>
+                    <h1 id="hero-text">Ceník
                     </h1>
                 </div>
 
             </div>
             <div id="content">
-                <section id="services">
-                    <h2>Služby</h2>
-                    <ul>
-                        <li>
-                            <h3>Tvarování keřů</h3>
-                            <div>
-                                <img src="/resources/scissors.svg">
-                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                    reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci,
-                                    ipsam
-                                    fugiat fugit voluptatem error. Officiis, nobis.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>Roubování stromů</h3>
-                            <img>
-                            <p></p>
-                        </li>
-                        <li>
-                            <h3>Prořezávání stromů</h3>
-                            <img>
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam modi amet autem, odit
-                                reiciendis voluptates? Autem blanditiis in eligendi corrupti cumque, eum adipisci, ipsam
-                                fugiat fugit voluptatem error. Officiis, nobis.</p>
-                        </li>
-                    </ul>
-                </section>
+                <p>Do ceny nejsou započítány náklady na dopravu (včetně nákladů za čas strávený dopravou) a cena
+                    samotných materiálů
+                    (rostlin, hnojivo, hlína, ...).</p>
+                <table>
+                    <caption>Orientační ceník za jednotlivé služby.</caption>
+                    <thead>
+                        <tr>
+                            <th>Služba</th>
+                            <th>Cena</th>
+                            <th>Jednotka</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Roubování stromů</td>
+                            <td>230 Kč</td>
+                            <td>strom</td>
+                        </tr>
+                        <tr>
+                            <td>Tvarování keřů</td>
+                            <td>120 Kč</td>
+                            <td>m<sup>2</sup></td>
+                        </tr>
+                        <tr>
+                            <td>Prořezávání stromů</td>
+                            <td>200 Kč</td>
+                            <td>strom</td>
+                        </tr>
+                        <tr>
+                            <td>Osázení zahrady</td>
+                            <td>400 Kč</td>
+                            <td><var>m</var><sup>2</sup></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p><small>Všechny ceny zde uvedené jsou pouze orientační a závisí na konkrétní zahradě.</small></p>
             </div>
         </main>
         <footer>
@@ -98,11 +104,11 @@
                     <ul>
                         <li><a href="./aboutUs.html">O nás</a></li>
                         <li class="dropdown">
-                            <button type="button" class="dropdown_btn" aria-expanded="false"
+                            <button type="button" class="js-dropdown-btn" aria-expanded="false"
                                 aria-controls="footer-our-services-dropdown-menu"><span>Naše služby</span><span
                                     class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
-                            <ul class="dropdown_menu" id="footer-our-services-dropdown-menu">
+                            <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
                                 <li><a href="./services.html">Naše služby</a></li>
                                 <li><a href="./services.html">Naše služby</a></li>
                                 <li><a href="./services.html">Naše služby</a></li>

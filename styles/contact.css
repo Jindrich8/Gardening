@@ -11,7 +11,6 @@
 
 .btn:hover {
     translate: 0.1rem 0.1rem;
-    cursor: pointer;
 }
 
 #content {
@@ -178,21 +177,26 @@ form .field:has(*:focus) label {
     max-width: 10rem;
 }
 
-.form-controls input[type="submit"] {
+:disabled {
+    cursor: not-allowed;
+}
+
+
+.form-controls input[type="submit"]:not(:disabled) {
     background-color: var(--form-submit-btn-bg-color);
     color: var(--form-submit-btn-c-color);
 }
 
-.form-controls input[type="submit"]:hover {
+.form-controls input[type="submit"]:not(:disabled):hover {
     background-color: var(--form-submit-btn-hover-bg-color);
 }
 
-.form-controls input[type="reset"] {
+.form-controls input[type="reset"]:not(:disabled) {
     background-color: var(--form-reset-btn-bg-color);
     color: var(--form-reset-btn-c-color);
 }
 
-.form-controls input[type="reset"]:hover {
+.form-controls input[type="reset"]:not(:disabled):hover {
     background-color: var(--form-reset-btn-hover-bg-color);
 }
 
