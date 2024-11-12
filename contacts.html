@@ -90,9 +90,17 @@
                     </div>
                 </section>
                 <section class="contacts-form-section">
+                    <div id="c-form-alert" class="alert js-alert hidden" data-js-type="success">
+                        <button class="btn js-close-btn close-btn icon-btn" aria-label="Zavřít" type="button"><span
+                                class="bi bi-x-lg"></span></button>
+                        <div class="content">
+                            <p class="message js-message">Zpráva</p>
+                        </div>
+                    </div>
                     <h2 class="header">Kontaktní formulář</h2>
                     <div class="form-wrapper">
-                        <form class="contact-form no-action" id="contact-form" method="post" action="#">
+                        <form class="contact-form no-action" data-js-loading-id="c-form-loading"
+                            data-js-alert-id="c-form-alert" id="contact-form" method="post" action="#">
                             <div class="row">
                                 <div class="field">
                                     <label for="c-form-email">Email:</label>
@@ -100,7 +108,7 @@
                                 </div>
                                 <div class="field">
                                     <label for="c-form-name">Jméno:</label>
-                                    <input type="email" id="c-form-name" placeholder=" ">
+                                    <input type="text" id="c-form-name" placeholder=" ">
                                 </div>
                             </div>
                             <div class="row">
@@ -136,6 +144,12 @@
                                 <input type="reset" class="btn" value="Resetovat">
                             </div>
                         </form>
+                        <div class="loading hidden" id="c-form-loading" aria-label="Načítání">
+                            <div class="backdrop">
+                                <div class="spinner">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </div>

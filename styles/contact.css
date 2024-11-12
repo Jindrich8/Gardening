@@ -7,10 +7,110 @@
     --form-reset-btn-bg-color: rgb(197, 4, 4);
     --form-reset-btn-hover-bg-color: rgb(206, 21, 21);
     --form-reset-btn-c-color: white;
+    --alert-success-bg-color: rgba(37, 149, 37, 0.5);
+    --loading-spinner-color: rgb(29, 106, 15);
+
 }
 
 .btn:hover {
     translate: 0.1rem 0.1rem;
+}
+
+@keyframes spin {
+    from {
+        transform-origin: center center;
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform-origin: center center;
+        transform: rotate(360deg);
+    }
+}
+
+.loading {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--loading-spinner-color);
+}
+
+.loading:not(.hidden) {
+    z-index: 999;
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.loading .backdrop {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    border-radius: 5%;
+    padding: 1rem;
+}
+
+.loading:not(.hidden) .spinner {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 9px solid;
+    border-color: white;
+    border-right-color: var(--loading-spinner-color);
+    animation: spin 1s linear infinite;
+}
+
+.loading:not(.hidden)::backdrop {
+    background-color: black;
+}
+
+.alert {
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.25rem;
+    transition: transform 0.5s ease-in-out;
+}
+
+.alert.hidden {
+    transform: translateY(100%);
+}
+
+.alert[data-js-type="success"] {
+    background-color: var(--alert-success-bg-color);
+}
+
+.alert .close-btn {
+    display: block;
+    margin-left: auto;
+}
+
+.alert .content {
+    text-align: center;
+    margin: 0.5rem 1rem 1rem 0.5rem;
+}
+
+.icon-btn {
+    font-size: x-large;
+    background-color: transparent;
+    border: none;
+}
+
+.drop-zone {
+    height: 10rem;
+    width: 100%;
+}
+
+.hidden {
+    position: absolute;
+    visibility: hidden;
 }
 
 #content {
@@ -27,14 +127,14 @@ main address {
     margin: 0 auto;
 }
 
-.drop-zone {
-    height: 10rem;
-    width: 100%;
-}
-
 .open-hours .container {
     display: flex;
     flex-direction: column;
+}
+
+
+.header {
+    text-align: center;
 }
 
 .contacts-section {
@@ -43,9 +143,8 @@ main address {
     align-content: stretch;
 }
 
-
-.header {
-    text-align: center;
+.contacts-section :is(.map-container, .contacts) {
+    flex-grow: 1;
 }
 
 .contacts-section .container {
@@ -56,8 +155,10 @@ main address {
     row-gap: 1rem;
 }
 
-.contacts-section :is(.map-container, .contacts) {
-    flex-grow: 1;
+.contacts-section .contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .map {
@@ -65,12 +166,7 @@ main address {
     width: 100%;
     height: 100%;
     aspect-ratio: 40/28;
-}
-
-.contacts-section .contacts {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    margin: 1rem;
 }
 
 .open-hours .container {
@@ -84,34 +180,22 @@ main address {
 }
 
 /*#region Contact form*/
+
+.form-wrapper {
+    max-width: 90ch;
+    margin: 0 auto;
+    position: relative;
+}
+
 form.contact-form {
     display: flex;
     flex-direction: column;
     font-size: larger;
 }
 
-form .field {
-    display: flex;
-    position: relative;
-    flex-direction: column;
-    align-content: stretch;
-    max-width: 100%;
-    flex-grow: 1;
-}
-
 form textarea {
     resize: vertical;
     min-height: 5lh;
-}
-
-form .field :is(input, textarea) {
-    flex-grow: 1;
-    flex-shrink: 1;
-    border-width: var(--form-input-border-size);
-    padding: var(--form-input-padding-vertical);
-    border-radius: 0.6rem;
-    font-size: inherit;
-    max-width: 100%;
 }
 
 form .contact-info {
@@ -128,9 +212,23 @@ form .row {
     max-width: 100%;
 }
 
-.form-wrapper {
-    max-width: 90ch;
-    margin: 0 auto;
+form .field {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-content: stretch;
+    max-width: 100%;
+    flex-grow: 1;
+}
+
+form .field :is(input, textarea) {
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-width: var(--form-input-border-size);
+    padding: var(--form-input-padding-vertical);
+    border-radius: 0.6rem;
+    font-size: inherit;
+    max-width: 100%;
 }
 
 form .field label {
