@@ -57,6 +57,7 @@ svg:has(use) {
 nav {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     color: var(--primary-c-color);
     text-align: center;
 }
