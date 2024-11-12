@@ -78,9 +78,8 @@ const previewTemplate = /*html*/`
     <div class="dz-details"> 
         <div class="dz-size">
             <span data-dz-size="">
-                <strong>0.2</strong> MB</span>
                 </div> <div class="dz-filename">
-                    <span data-dz-name="">bridge-53769_640.jpg</span>
+                    <span data-dz-name=""></span>
                 </div>
                  </div> 
                   <div class="dz-error-message">
@@ -92,15 +91,21 @@ const previewTemplate = /*html*/`
                                 </div> 
                                 </div>`;
 
+
 const forms = document.querySelectorAll("form:has(.dropzone)");
 for (const form of forms) {
     const zones = [];
     if (!(form instanceof HTMLFormElement)) continue;
-    const dropZones = form.getElementsByClassName("dropzone");
-    for (const dropZone of dropZones) {
+    const fields = form.querySelectorAll('.field:has(.dropzone)');
+    for (const field of fields) {
+        const label = field.querySelector('label');
+        const dropZone = field.querySelector('.dropzone');
+        if (dropZone == null) continue;
+        const hiddenFileInputWrapper = dropZone.querySelector('.js-hidden-file-input-wrapper');
         const options = {
             ...dictOptions,
             url: form.action, autoProcessQueue: false, autoQueue: false, addRemoveLinks: true,
+            hiddenInputContainer: hiddenFileInputWrapper,
             previewTemplate,
             uploadProgress: () => { }
         };
@@ -109,6 +114,15 @@ for (const form of forms) {
             options.paramName = name;
         }
         const zone = new window.Dropzone(dropZone, options);
+        const fileInput = hiddenFileInputWrapper.querySelector('input[type="file"]');
+        if (label != null) {
+            if (fileInput.id?.length > 0) {
+                label.htmlFor = fileInput.id;
+            }
+            else {
+                fileInput.id = label.htmlFor;
+            }
+        }
         zones.push(zone);
     }
     form.addEventListener('reset', () => {
