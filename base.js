@@ -12,7 +12,7 @@ function getBetween(text, tag) {
     const end = text.indexOf(endTag);
     return text.substring(start, end);
 }
-fetch(window.location.origin).then((resp) => resp.text())
+fetch(window.location.origin + '/Gardening/').then((resp) => resp.text())
     .then((text) => {
         document.querySelector('header').innerHTML = getBetween(text, 'header');
         document.querySelector('footer').innerHTML = getBetween(text, 'footer');
