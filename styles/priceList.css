@@ -1,0 +1,41 @@
+#content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+}
+
+table {
+    table-layout: fixed;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 70rem;
+    height: max-content;
+    margin: 2rem auto;
+}
+
+table caption {
+    margin: 1rem;
+}
+
+table thead {
+    border-bottom: 2px solid black;
+}
+
+table tbody tr {
+    border-top: 1px solid black;
+}
+
+thead th {
+    padding: min(1rem, 1vw);
+}
+
+tbody td {
+    padding: min(1.5rem, 1.5vw);
+}
+
+@media only screen and (max-width: 600px) {}

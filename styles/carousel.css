@@ -1,0 +1,37 @@
+.carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    height: auto;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.carousel li {
+    min-width: 33%;
+}
+
+.carousel li .img-container {
+    flex-grow: 1;
+}
+
+.img-w-detail {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.img-container img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+    .carousel li {
+        min-width: 100%;
+    }
+}
