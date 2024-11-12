@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/carousel.css">
 
     <title>Zahradnické služby Gardenio</title>
 </head>
@@ -38,11 +39,11 @@
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
                         <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
-                            <li><a href="./services.html">Všechny služby</a></li>
-                            <li><a href="./services.html">Naše služby A</a></li>
-                            <li><a href="./services.html">Naše služby B</a></li>
-                            <li><a href="./services.html">Naše služby C</a></li>
-                            <li><a href="./services.html">Naše služby D</a></li>
+                            <li><a href="./services.html#">Všechny služby</a></li>
+                            <li><a href="./services.html#tree-pruning">Prořezávání stromů</a></li>
+                            <li><a href="./services.html#bushes-shaping">Tvarování keřů</a></li>
+                            <li><a href="./services.html#garden-planting">Osázení zahrady</a></li>
+                            <li><a href="./services.html#grafting">Roubování</a></li>
                         </ul>
                     </li>
                     <li><a href="./priceList.html">Ceník</a></li>
@@ -53,9 +54,9 @@
         <main>
             <div id="hero">
                 <div id="text">
-                    <h1 id="hero-text"><span>Gardenio</span> <span>zahradnické</span> <a href="./services.html"
-                            class="btn" id="services-btn">služby</a>
-                        <span>Pardubice a okolí</span>
+                    <h1 id="hero-text"><span>Gardenio&nbsp;</span><span>zahradnické&nbsp;</span> <a
+                            href="./services.html" class="btn" id="services-btn">služby</a>
+                        <span>&nbsp;Pardubice a okolí</span>
                     </h1>
                 </div>
 
@@ -64,50 +65,62 @@
                 <section id="services">
                     <h2 class="header">Služby</h2>
                     <ul>
-                        <li>
+                        <li class="row-wrapper">
+                            <ul class="row">
+                                <li class="service-item">
+                                    <h3>Tvarování keřů</h3>
+                                    <div class="service">
+                                        <div class="img-container">
+                                            <img src="./resources/shorn-single-hedge.jpg">
+                                        </div>
+                                        <p class="text">Dopřejte své zahradě elegantní vzhled s naším profesionálním
+                                            tvarováním
+                                            keřů. Precizní střih a cit pro detail promění
+                                            každý keř v harmonický prvek vaší zahrady.</p>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <h3>Roubování stromů</h3>
+                                    <div class="service">
+                                        <div class="img-container">
+                                            <img src="./resources/graft.jpg">
+                                        </div>
+                                        <p class="text">Specializujeme se na roubování ovocných a okrasných stromů.
+                                            Pomůžeme vám
+                                            udržet staré stromy nebo vypěstovat nové odrůdy
+                                            na vašem pozemku.</p>
+                                    </div>
+                                </li>
+                            </ul>
 
-                            <h3>Tvarování keřů</h3>
-                            <div class="service">
-                                <div class="img-container">
-                                    <img src="./resources/shorn-single-hedge.jpg">
-                                </div>
-                                <p class="text">Dopřejte své zahradě elegantní vzhled s naším profesionálním tvarováním
-                                    keřů. Precizní střih a cit pro detail promění
-                                    každý keř v harmonický prvek vaší zahrady.</p>
-                            </div>
                         </li>
-                        <li>
-                            <h3>Roubování stromů</h3>
-                            <div class="service">
-                                <div class="img-container">
-                                    <img src="./resources/graft.jpg">
-                                </div>
-                                <p class="text">Specializujeme se na roubování ovocných a okrasných stromů. Pomůžeme vám
-                                    udržet staré stromy nebo vypěstovat nové odrůdy
-                                    na vašem pozemku.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>Prořezávání stromů</h3>
-                            <div class="service">
-                                <div class="img-container">
-                                    <img src="./resources/chainsaw.jpg">
-                                </div>
-                                <p class="text">Udržujte své stromy zdravé a krásné díky našemu odbornému prořezávání.
-                                    Bezpečně odstraníme přebytečné větve a podpoříme
-                                    růst stromů v jejich přirozeném tvaru.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <h3>Osázení zahrady</h3>
-                            <div class="service">
-                                <div class="img-container">
-                                    <img src="./resources/pepper.jpg">
-                                </div>
-                                <p class="text">Pomůžeme vám vytvořit nádherné záhony a výsadby přesně podle vašich
-                                    představ. Ať už chcete záplavu květin nebo zelené
-                                    oázy, máme pro vás řešení.</p>
-                            </div>
+                        <li class="row-wrapper">
+                            <ul class="row">
+                                <li class="service-item">
+                                    <h3>Prořezávání stromů</h3>
+                                    <div class="service">
+                                        <div class="img-container">
+                                            <img src="./resources/chainsaw.jpg">
+                                        </div>
+                                        <p class="text">Udržujte své stromy zdravé a krásné díky našemu odbornému
+                                            prořezávání.
+                                            Bezpečně odstraníme přebytečné větve a podpoříme
+                                            růst stromů v jejich přirozeném tvaru.</p>
+                                    </div>
+                                </li>
+                                <li class="service-item">
+                                    <h3>Osázení zahrady</h3>
+                                    <div class="service">
+                                        <div class="img-container">
+                                            <img src="./resources/pepper.jpg">
+                                        </div>
+                                        <p class="text">Pomůžeme vám vytvořit nádherné záhony a výsadby přesně podle
+                                            vašich
+                                            představ. Ať už chcete záplavu květin nebo zelené
+                                            oázy, máme pro vás řešení.</p>
+                                    </div>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </section>
@@ -122,7 +135,42 @@
                 </section>
                 <section>
                     <h2 class="header">Naše projekty</h2>
+                    <div>
+                        <ul class="carousel">
+                            <li class="img-w-detail">
+                                <div class="img-container">
+                                    <a class="detail-link" href="./resources/bench_1920.jpg">
+                                        <img src="./resources/bench_640.jpg" alt="lavička" />
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="img-w-detail">
+                                <div class="img-container">
+                                    <a class="detail-link" href="./resources/bridge_1920.jpg">
+                                        <img src="./resources/bridge_640.jpg" alt="Japonská zahrada s mostem" />
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="img-w-detail">
+                                <div class="img-container">
+                                    <a class="detail-link" href="./resources/marqueyssac_1920.jpg"
+                                        aria-label="Otevři detail obrázku"
+                                        alt="Zahrada s keřemi upravenými do kulatých tvarů">
+                                        <img class="small" src="./resources/marqueyssac_640.jpg"
+                                            alt="Zahrada s keřemi upravenými do kulatých tvarů" />
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="img-w-detail">
+                                <div class="img-container">
+                                    <a class="detail-link" href="./resources/trees_1920.jpg" alt="Vytvarované stromky">
+                                        <img class="small" src="./resources/trees_640.jpg" alt="Vytvarované stromky" />
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
 
+                    </div>
                 </section>
             </div>
         </main>
@@ -140,11 +188,11 @@
                                     class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
                             <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
-                                <li><a href="./services.html">Všechny služby</a></li>
-                                <li><a href="./services.html">Naše služby A</a></li>
-                                <li><a href="./services.html">Naše služby B</a></li>
-                                <li><a href="./services.html">Naše služby C</a></li>
-                                <li><a href="./services.html">Naše služby D</a></li>
+                                <li><a href="./services.html#">Všechny služby</a></li>
+                                <li><a href="./services.html#tree-pruning">Prořezávání stromů</a></li>
+                                <li><a href="./services.html#bushes-shaping">Tvarování keřů</a></li>
+                                <li><a href="./services.html#garden-planting">Osázení zahrady</a></li>
+                                <li><a href="./services.html#grafting">Roubování</a></li>
                             </ul>
                         </li>
                         <li><a href="./contacts.html">Kontakt</a></li>

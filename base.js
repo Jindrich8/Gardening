@@ -20,7 +20,7 @@ fetch(window.location.origin).then((resp) => resp.text())
     });
 //#endregion temp
 function main() {
-
+    window.device = device;
     const eventTimeGap = 1;
     const lastEvent = {
         timeStamp: undefined,
@@ -29,7 +29,7 @@ function main() {
         y: undefined
     };
 
-    document.body.dataset['js'] = true;
+    document.body.classList.add("supports-js");
 
 
     function createCallback(callback) {
@@ -101,6 +101,7 @@ function main() {
                 document.querySelectorAll(".js-dropdown.open").forEach(e => {
                     if (e instanceof HTMLElement && !dropdownShouldStayOpen(e)) {
                         toggleDropdown(e, false);
+                        --dropdownOpenCount;
                     }
                 });
             }, { ...onceOptions, signal: scrollController.signal });
@@ -180,12 +181,12 @@ function main() {
         };
         const callback = createCallback((event) => {
             state.controller?.abort();
-            if (state.e.dataset['openedBy'] === 'hover') {
+            if (state.e.dataset['openedBy'] === 'hover' && !device.isTouch()) {
                 const allHref = state.e.dataset['jsAllHref'];
                 if (allHref != null) {
                     const href = (new URL(allHref, window.location.origin)).href;
                     window.location.href = href;
-                }
+                } d
             }
             if (toggle(state.e)) {
                 onOpen(event, state.e);
