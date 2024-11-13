@@ -110,7 +110,7 @@ nav li button {
 }
 
 nav :is(a, button):hover {
-    translate: 1% 1%;
+    transform: translate(1%, 1%);
 }
 
 nav a.current {
