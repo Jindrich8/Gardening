@@ -24,12 +24,13 @@
                     </a>
                 </div>
                 <div id="hamburger">
-                    <button id="hamburger-btn" type="button" aria-label="Menu" popovertarget="main-menu">
+                    <input type="checkbox" id="hamburger-checkbox">
+                    <label for="hamburger-checkbox" id="hamburger-icon-container">
                         <span class="bi bi-list list-icon"></span>
                         <span class="bi bi-x-lg close-icon"></span>
-                    </button>
+                    </label>
                 </div>
-                <ul id="main-menu" class="menu" popover>
+                <ul id="main-menu">
                     <li><a class="current" href="/">Domů</a></li>
                     <li><a href="./aboutUs.html">O nás</a></li>
                     <li class="js-dropdown" data-js-all-href="./services.html">
@@ -192,7 +193,6 @@
 
                 <nav>
                     <ul>
-                        <li><a class="current" href="/">Domů</a></li>
                         <li><a href="./aboutUs.html">O nás</a></li>
                         <li class="js-dropdown up" data-js-all-href="./services.html">
                             <button type="button" class="js-dropdown-btn" aria-expanded="false"
@@ -207,8 +207,8 @@
                                 <li><a href="./services.html#grafting">Roubování</a></li>
                             </ul>
                         </li>
-                        <li><a href="./priceList.html">Ceník</a></li>
                         <li><a href="./contacts.html">Kontakt</a></li>
+                        <li><a href="./priceList.html">Ceník</a></li>
                     </ul>
                 </nav>
 
