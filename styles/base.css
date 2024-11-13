@@ -32,7 +32,7 @@ body {
     width: auto;
     height: auto;
     box-sizing: border-box;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .menu[popover]::backdrop {
