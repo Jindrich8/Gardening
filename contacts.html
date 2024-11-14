@@ -23,29 +23,29 @@
                     </a>
                 </div>
                 <div id="hamburger">
-                    <input type="checkbox" id="hamburger-checkbox">
-                    <label for="hamburger-checkbox" id="hamburger-icon-container">
+                    <button id="hamburger-btn" type="button" aria-label="Menu" popovertarget="main-menu">
                         <span class="bi bi-list list-icon"></span>
                         <span class="bi bi-x-lg close-icon"></span>
-                    </label>
+                    </button>
                 </div>
-                <ul id="main-menu">
-                    <li><a class="current" href="/">Domů</a></li>
+                <ul id="main-menu" class="menu" popover>
+                    <li><a href="/">Domů</a></li>
                     <li><a href="./aboutUs.html">O nás</a></li>
-                    <li class="dropdown">
+                    <li class="js-dropdown" data-js-all-href="./services.html">
                         <button type="button" class="js-dropdown-btn"
                             aria-controls="header-our-services-dropdown-menu">Naše služby<span
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
                         <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
-                            <li><a href="./services.html">Naše služby</a></li>
-                            <li><a href="./services.html">Naše služby</a></li>
-                            <li><a href="./services.html">Naše služby</a></li>
-                            <li><a href="./services.html">Naše služby</a></li>
+                            <li><a href="./services.html#">Všechny služby</a></li>
+                            <li><a href="./services.html#tree-pruning">Prořezávání stromů</a></li>
+                            <li><a href="./services.html#bushes-shaping">Tvarování keřů</a></li>
+                            <li><a href="./services.html#garden-planting">Osázení zahrady</a></li>
+                            <li><a href="./services.html#grafting">Roubování</a></li>
                         </ul>
                     </li>
                     <li><a href="./priceList.html">Ceník</a></li>
-                    <li><a href="./contacts.html">Kontakt</a></li>
+                    <li><a class="current" href="./contacts.html">Kontakt</a></li>
                 </ul>
             </nav>
         </header>
@@ -62,16 +62,20 @@
                     <div class="container">
                         <div class="contacts">
                             <address>
-                                <span class="label">Telefon: </span>
-                                <a href="tel:+420123456789">+420 123 456
-                                    789</a>
-
-                                <span class="label">Email: </span>
-                                <a href="mailto:info@gardenio.cz">info@gardenio.cz</a>
-
-                                <span class="label">Adresa: </span>
-                                <span class="location-address">Hlaváčova 14,
-                                    530 02 Pardubice</span>
+                                <div class="row">
+                                    <span class="label">Telefon: </span>
+                                    <a href="tel:+420123456789">+420 123 456
+                                        789</a>
+                                </div>
+                                <div class="row">
+                                    <span class="label">Email: </span>
+                                    <a href="mailto:info@gardenio.cz">info@gardenio.cz</a>
+                                </div>
+                                <div class="row">
+                                    <span class="label">Adresa: </span>
+                                    <span class="location-address">Hlaváčova 14,
+                                        530 02 Pardubice</span>
+                                </div>
                             </address>
                             <div class="open-hours">
                                 <h3 class="header">Otevírací doba</h2>
@@ -85,7 +89,11 @@
                             </div>
                         </div>
                         <div class="map-container">
-                            <iframe class="map" src="https://frame.mapy.cz/s/nusabobura" frameborder="0"></iframe>
+                            <!--<iframe class="map" src="https://frame.mapy.cz/s/nusabobura" frameborder="0" loading="lazy"></iframe>-->
+                            <iframe class="map"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d353.9245750414292!2d15.77097231566607!3d50.032075028420394!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1scs!2scz!4v1731512476824!5m2!1scs!2scz"
+                                style="border:0;" allowfullscreen="" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </section>
@@ -161,27 +169,30 @@
 
                 <nav>
                     <ul>
+                        <li><a href="/">Domů</a></li>
                         <li><a href="./aboutUs.html">O nás</a></li>
-                        <li class="dropdown">
+                        <li class="js-dropdown up" data-js-all-href="./services.html">
                             <button type="button" class="js-dropdown-btn" aria-expanded="false"
                                 aria-controls="footer-our-services-dropdown-menu"><span>Naše služby</span><span
                                     class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
                             <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
-                                <li><a href="./services.html">Naše služby</a></li>
-                                <li><a href="./services.html">Naše služby</a></li>
-                                <li><a href="./services.html">Naše služby</a></li>
-                                <li><a href="./services.html">Naše služby</a></li>
+                                <li><a href="./services.html#">Všechny služby</a></li>
+                                <li><a href="./services.html#tree-pruning">Prořezávání stromů</a></li>
+                                <li><a href="./services.html#bushes-shaping">Tvarování keřů</a></li>
+                                <li><a href="./services.html#garden-planting">Osázení zahrady</a></li>
+                                <li><a href="./services.html#grafting">Roubování</a></li>
                             </ul>
                         </li>
-                        <li><a href="./contacts.html">Kontakt</a></li>
                         <li><a href="./priceList.html">Ceník</a></li>
+                        <li><a class="current" href="./contacts.html">Kontakt</a></li>
                     </ul>
                 </nav>
 
                 <address>
                     <a href="mailto:info@gardenio.cz">info@gardenio.cz</a>
                     <a href="tel:+420123456789">+420 123 456 789</a>
+                    <span class="location-address">Hlaváčova 14, 530 02 Pardubice</span>
                 </address>
 
                 <div>
