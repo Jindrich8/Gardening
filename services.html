@@ -16,15 +16,16 @@
         <header>
             <nav>
                 <div id="logo-item">
-                    <a href="/"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-                            <circle r="25" cx="25" cy="25" fill="red" />
-                        </svg>
+                    <a href="/" aria-label="Domů">
+                        <div class="img-container">
+                            <img src="./resources/gardenio-logo.svg" alt="Gardenio logo">
+                        </div>
                     </a>
                 </div>
                 <div id="hamburger">
-                    <button id="hamburger-btn" type="button" aria-label="Menu" popovertarget="main-menu">
-                        <span class="bi bi-list list-icon"></span>
-                        <span class="bi bi-x-lg close-icon"></span>
+                    <button id="hamburger-btn" type="button" popovertarget="main-menu" aria-label="Menu">
+                        <span class="bi bi-list list-icon" aria-hidden="true"></span>
+                        <span class="bi bi-x-lg close-icon" aria-hidden="true"></span>
                     </button>
                 </div>
                 <ul id="main-menu" class="menu" popover>
@@ -32,7 +33,7 @@
                     <li><a href="./aboutUs.html">O nás</a></li>
                     <li class="js-dropdown" data-js-all-href="./services.html">
                         <button type="button" class="js-dropdown-btn"
-                            aria-controls="header-our-services-dropdown-menu">Naše služby<span
+                            aria-controls="header-our-services-dropdown-menu">Naše služby<span aria-hidden="true"
                                 class="bi bi-caret-down-fill dropdown-indicator"></span></button>
 
                         <ul class="dropdown-menu" id="header-our-services-dropdown-menu">
@@ -63,8 +64,8 @@
                     rok. Naše nabídka zahrnuje:</p>
                 <section id="services">
                     <ul>
-                        <li class="service-item">
-                            <h2 class="header" id="bushes-shaping">Tvarování keřů</h2>
+                        <li class="service-item" id="bushes-shaping">
+                            <h2 class="header">Tvarování keřů</h2>
                             <div class="service">
                                 <img src="./resources/trees/640.jpg">
                                 <p class="text">
@@ -78,8 +79,8 @@
                             </div>
 
                         </li>
-                        <li class="service-item">
-                            <h2 class="header" id="tree-pruning">Prořezávání stromů</h2>
+                        <li class="service-item" id="tree-pruning">
+                            <h2 class="header">Prořezávání stromů</h2>
                             <div class="service">
                                 <img src="./resources/tree-pruning.jpg">
                                 <p class="text">
@@ -94,8 +95,8 @@
 
                             </div>
                         </li>
-                        <li class="service-item">
-                            <h2 class="header" id="garden-planting">Osázení zahrady</h2>
+                        <li class="service-item" id="garden-planting">
+                            <h2 class="header">Osázení zahrady</h2>
                             <div class="service">
                                 <img src="./resources/marqueyssac/640.jpg">
                                 <p class="text">
@@ -112,8 +113,8 @@
 
                             </div>
                         </li>
-                        <li class="service-item">
-                            <h2 class="header" id="grafting">Roubování</h2>
+                        <li class="service-item" id="grafting">
+                            <h2 class="header">Roubování</h2>
                             <div class="service">
                                 <img src="./resources/graft.jpg">
                                 <p class="text">
@@ -136,7 +137,7 @@
             </div>
         </main>
         <footer>
-            <div>
+            <div class="content">
                 <h4>Zahradnické služby v Pardubicích a okolí Gardenio</h4>
                 <p>Tvarování keřů, údržba zahrad a další zahradnické práce</p>
 
@@ -144,19 +145,7 @@
                     <ul>
                         <li><a href="/">Domů</a></li>
                         <li><a href="./aboutUs.html">O nás</a></li>
-                        <li class="js-dropdown up" data-js-all-href="./services.html">
-                            <button type="button" class="js-dropdown-btn" aria-expanded="false"
-                                aria-controls="footer-our-services-dropdown-menu"><span>Naše služby</span><span
-                                    class="bi bi-caret-down-fill dropdown-indicator"></span></button>
-
-                            <ul class="dropdown-menu" id="footer-our-services-dropdown-menu">
-                                <li><a href="./services.html#">Všechny služby</a></li>
-                                <li><a href="./services.html#tree-pruning">Prořezávání stromů</a></li>
-                                <li><a href="./services.html#bushes-shaping">Tvarování keřů</a></li>
-                                <li><a href="./services.html#garden-planting">Osázení zahrady</a></li>
-                                <li><a href="./services.html#grafting">Roubování</a></li>
-                            </ul>
-                        </li>
+                        <li><a class="current" href="./services.html">Naše služby</a></li>
                         <li><a href="./priceList.html">Ceník</a></li>
                         <li><a href="./contacts.html">Kontakt</a></li>
                     </ul>

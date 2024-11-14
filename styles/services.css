@@ -1,4 +1,4 @@
-img {
+#content img {
     display: block;
     max-width: 100%;
     width: 12rem;
@@ -13,7 +13,6 @@ img {
 }
 
 .text {
-    max-width: 175ch;
     text-align: center;
     margin: auto;
 }
@@ -43,7 +42,7 @@ img {
 }
 
 @media only screen and (max-width:700px) {
-    div:has(img) {
+    #content div:has(img) {
         display: flex;
         flex-direction: column;
         align-items: center;

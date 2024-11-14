@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     text-align: center;
+    align-items: center;
     margin-left: auto;
     margin-right: auto;
     height: 100%;
