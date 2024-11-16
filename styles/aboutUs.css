@@ -8,6 +8,10 @@
     max-width: 100%;
 }
 
+section {
+    overflow-x: auto;
+}
+
 section .content {
     display: flex;
     flex-direction: column;
@@ -41,4 +45,3 @@ section .content {
     display: flex;
     flex-direction: column;
 }
-

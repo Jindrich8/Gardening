@@ -13,6 +13,7 @@
 html {
     scrollbar-color: rgb(7, 95, 7) white;
     scroll-padding-top: var(--mobile-nav-height);
+    overflow-x: auto;
 }
 
 body {
@@ -53,22 +54,23 @@ main {
 
 #content {
     width: 100%;
+    overflow-x: auto;
     margin: 2rem auto;
     flex-grow: 1;
     max-width: max(80vw, 320px);
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    padding: 0 1rem;
+    padding: 0 20px;
     box-sizing: border-box;
 }
-
 
 #main-menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     gap: min(max(1rem, 1vw), 20rem);
+    max-height: calc(100vh - var(--mobile-nav-height));
 }
 
 svg:has(use) {
@@ -128,6 +130,7 @@ nav a.current {
 /*#region header*/
 header {
     position: fixed;
+    max-width: 100vw;
     left: 0;
     right: 0;
     top: 0;
@@ -140,11 +143,12 @@ header nav {
 
 #logo-item {
     max-height: 100%;
-    margin: 1rem;
+    margin: 1lh min(1lh, 25px);
+    flex-shrink: 0;
 }
 
 #logo-item:hover {
-    translate: 0.1rem 0.1rem;
+    translate: 1% 1%;
 }
 
 #logo-item .img-container {
@@ -218,17 +222,20 @@ header nav:has(#main-menu:popover-open)::before {
 #hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../resources/hero.webp");
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
     position: relative;
     width: 100%;
+    overflow-x: auto;
     height: 30vh;
     z-index: 1;
     color: var(--primary-c-color);
+}
+
+#hero .text {
+    margin: auto;
 }
 
 
@@ -236,14 +243,16 @@ header nav:has(#main-menu:popover-open)::before {
 /*#region footer*/
 
 footer {
+    overflow-x: auto;
     background-color: #2d6a4f;
     color: white;
-    padding: 1rem 0;
+    padding: 16px 0;
     text-align: center;
 }
 
 footer .content {
     display: flex;
+    min-width: min-content;
     flex-direction: column;
     align-items: center;
 }
@@ -265,7 +274,7 @@ footer address {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    margin: 0.25rem 0 1rem 0;
+    margin: 0.25lh 0 1lh 0;
 }
 
 /*#endregion footer*/
@@ -337,7 +346,7 @@ button.js-dropdown-btn {
     padding: 0.1rem;
 }
 
-@media only screen and (width > 700px) {
+@media only screen and (width > 700px) and (width > 40rem) {
     @keyframes dropdown_open {
 
         0%,
@@ -402,7 +411,8 @@ button.js-dropdown-btn {
 }
 
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 700px),
+(max-width: 40rem) {
 
     @keyframes dropdown_mobile_open {
         from {
@@ -435,9 +445,6 @@ button.js-dropdown-btn {
     }
 
     /*#region header*/
-    #logo-item {
-        width: 5em;
-    }
 
     .js-dropdown {
         display: flex;
@@ -514,7 +521,7 @@ button.js-dropdown-btn {
     }
 
     footer {
-        padding: 1rem;
+        padding: 1lh 16px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -522,7 +529,7 @@ button.js-dropdown-btn {
     footer nav ul {
         flex-direction: column;
         width: 100%;
-        margin: 1rem 0;
+        margin: 16px 0;
     }
 
 
@@ -574,6 +581,8 @@ button.js-dropdown-btn {
         position: fixed;
         height: fit-content;
         flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
         background-color: var(--primary-bg-color);
         top: var(--mobile-nav-height);
         width: 100%;

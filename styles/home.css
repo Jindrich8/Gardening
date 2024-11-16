@@ -6,7 +6,7 @@
 #content {
     text-align: center;
     margin: 2rem 0;
-    padding: 0 2rem;
+    padding: 0 20px;
     box-sizing: border-box;
     width: 100%;
     max-width: 100vw;
@@ -18,7 +18,7 @@ a.btn {
 }
 
 .btn {
-    padding: 1rem;
+    padding: 1rem 1%;
     border: 0.15rem solid var(--primary-bg-color);
     border-radius: 50%;
     background-color: var(--primary-bg-color);
@@ -26,14 +26,16 @@ a.btn {
 }
 
 .btn:hover {
-    translate: 0.1rem 0.1rem;
+    translate: 1% 1%;
 }
 
 
 
 #hero {
     height: 75vh;
-
+    min-height: fit-content;
+    padding: var(--mobile-nav-height, 0) 0;
+    box-sizing: border-box;
 }
 
 #hero-text {
@@ -41,10 +43,12 @@ a.btn {
     color: var(--primary-c-color);
     align-items: center;
     text-align: center;
-    gap: 0.5rem;
+    row-gap: 0.5rem;
     margin: auto;
     flex-direction: column;
     width: fit-content;
+    max-width: 100%;
+    word-break: break-all;
 }
 
 #hero-text .btn {
@@ -93,12 +97,11 @@ a.btn {
     flex-wrap: wrap;
     text-align: center;
     text-wrap: balance;
-    gap: 0.5rem;
+    gap: 1ch;
 }
 
 #services .service .text {
-    min-width: 10rem;
-    max-width: 15rem;
+    max-width: 27ch;
 }
 
 .service-item .service .img-container {
@@ -108,6 +111,7 @@ a.btn {
 .service-item .service .img-container img {
     height: 7lh;
     width: 7lh;
+    max-width: 100%;
     object-fit: cover;
     object-position: center;
 }
@@ -119,9 +123,9 @@ section .header {
 .text {
     height: max-content;
     margin: auto;
-    max-width: 50rem;
+    max-width: 90ch;
 }
 
 section:not(:last-of-type) {
-    margin-bottom: 6rem;
+    margin-bottom: 1lh;
 }

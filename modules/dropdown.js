@@ -72,7 +72,7 @@ const handleDropdownClose = () => {
 };
 
 function dropdownShouldStayOpen(e) {
-    return e instanceof HTMLElement && (e === document.activeElement || !device.isMobile() && e.matches(':hover'));
+    return e instanceof HTMLElement && (e === document.activeElement || !device.isTouch() && e.matches(':hover'));
 }
 
 
@@ -170,7 +170,7 @@ const registerDropdown = (e) => {
     };
     const callback = createCallback((event) => {
         state.controller?.abort();
-        if (state.e.dataset['openedBy'] === 'hover' && !device.isTouch()) {
+        if (state.e.dataset['openedBy'] === 'hover' && !device.isTouch() && !device.isMobile()) {
             const allHref = state.e.dataset['jsAllHref'];
             if (allHref != null) {
                 const href = (new URL(allHref, window.location.origin)).href;

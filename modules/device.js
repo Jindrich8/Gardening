@@ -1,4 +1,4 @@
-const mobileMedia = window.matchMedia("only screen and (max-width: 700px)");
+const mobileMedia = window.matchMedia("only screen and (max-width: 700px), (max-width: 40rem)");
 const touchScreenMedia = window.matchMedia("(pointer: coarse)");
 const mobileUniqueObservers = new Map();
 const touchUniqueObservers = new Map();

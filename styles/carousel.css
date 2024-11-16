@@ -17,6 +17,7 @@
 
 .carousel li .img-container {
     flex-grow: 1;
+    height: 100%;
 }
 
 .catousel .img-w-detail {
@@ -33,7 +34,8 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px),
+(max-width: 40rem) {
     .carousel li {
         min-width: 100%;
     }
