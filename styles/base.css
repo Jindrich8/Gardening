@@ -1,17 +1,24 @@
 :root {
     --primary-bg-color: green;
     --secondary-bg-color: white;
+
     --primary-c-color: white;
     --secondary-c-color: black;
 
     --hover-primary-bg-color: rgb(1, 90, 1);
     --hover-secondary-bg-color: rgb(236, 236, 236);
+
     --mobile-nav-height: 5em;
     --nav-bg-color: var(--primary-bg-color);
+
+    --page-scrollbar-c-color: rgb(7, 95, 7);
+    --page-scrollbar-bg-color: white;
+
+    --footer-bg-color: #2d6a4f;
 }
 
 html {
-    scrollbar-color: rgb(7, 95, 7) white;
+    scrollbar-color: var(--page-scrollbar-c-color) var(--page-scrollbar-bg-color);
     scroll-padding-top: var(--mobile-nav-height);
     overflow-x: auto;
 }
@@ -244,7 +251,7 @@ header nav:has(#main-menu:popover-open)::before {
 
 footer {
     overflow-x: auto;
-    background-color: #2d6a4f;
+    background-color: var(--footer-bg-color);
     color: white;
     padding: 16px 0;
     text-align: center;
@@ -255,6 +262,12 @@ footer .content {
     min-width: min-content;
     flex-direction: column;
     align-items: center;
+}
+
+footer .small-text-rows {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.25lh;
 }
 
 footer a {
@@ -390,14 +403,6 @@ button.js-dropdown-btn {
         color: var(--secondary-c-color);
         animation: dropdown_close 0.15s ease-in-out;
 
-    }
-
-    .js-dropdown.up .dropdown-menu {
-        top: auto;
-        flex-direction: column-reverse;
-        bottom: calc(100% - 0.75rem);
-        --translateY: 10%;
-        --transform-vertical-origin: bottom;
     }
 
     :is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {

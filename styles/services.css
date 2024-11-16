@@ -31,7 +31,7 @@
 
 .service-item .text {
     max-width: 175ch;
-
+    text-align: left;
 }
 
 .service {
@@ -49,5 +49,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    .service-item .text {
+        text-align: center;
     }
 }
