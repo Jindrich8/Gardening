@@ -15,6 +15,10 @@
     --page-scrollbar-bg-color: white;
 
     --footer-bg-color: #2d6a4f;
+
+    --hero-bg-color: rgba(20, 80, 20, 0.25);
+
+    --hero-overlay-bg: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1));
 }
 
 html {
@@ -229,16 +233,24 @@ header nav:has(#main-menu:popover-open)::before {
 #hero {
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url("../resources/hero.webp");
+    background-image: var(--hero-overlay-bg), url("../resources/hero/700.webp");
+    background-image: var(--hero-overlay-bg), image-set(url("../resources/hero/2500.webp") 3.57x,
+            url("../resources/hero/1920.webp") 2.74x,
+            url("../resources/hero/1792.webp") 2.56x,
+            url("../resources/hero/1075.webp")1.5x,
+            url("../resources/hero/700.webp") 1x,
+            url("../resources/hero/425.webp") 0.6x);
+    height: calc(100vw / 7 * 4);
+    min-height: fit-content;
+    max-height: 100vh;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
-    background-size: cover, cover;
+    background-size: cover;
     position: relative;
-    width: 100%;
     overflow-x: auto;
-    height: 30vh;
     z-index: 1;
     color: var(--primary-c-color);
+    background-color: var(--hero-bg-color);
 }
 
 #hero .text {
@@ -317,10 +329,15 @@ footer address {
     color: inherit;
 }
 
-:is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
+:is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within):not(:has(.js-dropdown-btn::after:focus-within))) .dropdown-menu {
     display: flex;
     visibility: visible;
     opacity: 1;
+}
+
+body:not(.supports-js) .js-dropdown:is(:hover,
+    :focus-within) .js-dropdown-btn::after {
+    content: "X";
 }
 
 button.js-dropdown-btn {

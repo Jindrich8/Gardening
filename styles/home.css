@@ -32,7 +32,6 @@ a.btn {
 
 
 #hero {
-    height: 75vh;
     min-height: fit-content;
     padding: var(--mobile-nav-height, 0) 0;
     box-sizing: border-box;

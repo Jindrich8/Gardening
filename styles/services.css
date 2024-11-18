@@ -1,15 +1,50 @@
 #content img {
-    display: block;
-    max-width: 100%;
-    width: 12rem;
-    float: left;
-    margin-right: 32px;
-    margin-left: 32px;
+    align-self: center;
     object-fit: cover;
     object-position: center;
-    margin-bottom: 1rem;
-    shape-outside: ellipse();
+    overflow: visible;
+    text-overflow: ellipsis;
+    min-height: fit-content;
+    text-align: center;
+    overflow: hidden;
     border-radius: 50%;
+}
+
+
+
+#content img::before {
+    display: block;
+    content: " ";
+    height: 2lh;
+    width: 1lh;
+}
+
+#content img::after {
+    display: block;
+    content: " ";
+    height: 1lh;
+    width: 1lh;
+}
+
+#content .img-container {
+    display: flex;
+    overflow: visible;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    overflow: visible;
+    margin-right: 32px;
+    margin-left: 32px;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+
+    max-width: 100%;
+    width: max(320px, 10%);
+    float: left;
+    shape-outside: ellipse();
+    /*mask-image: radial-gradient(white, black);*/
+
 }
 
 .text {
