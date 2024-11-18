@@ -173,7 +173,7 @@ const registerDropdown = (e) => {
         if (state.e.dataset['openedBy'] === 'hover' && !device.isTouch() && !device.isMobile()) {
             const allHref = state.e.dataset['jsAllHref'];
             if (allHref != null) {
-                const href = (new URL(allHref, window.location.origin)).href;
+                const href = (new URL(allHref, window.location.href)).href;
                 window.location.href = href;
             }
         }
