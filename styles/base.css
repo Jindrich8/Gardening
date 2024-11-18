@@ -6,7 +6,7 @@
     --primary-c-color: white;
     --secondary-c-color: black;
 
-    --hover-primary-bg-color: rgb(1, 90, 1);
+    --hover-primary-bg-color: rgb(5, 137, 5);
     --hover-secondary-bg-color: rgb(236, 236, 236);
 
     --mobile-nav-height: 5em;
@@ -274,6 +274,10 @@ footer .content {
     align-items: center;
 }
 
+footer .content h2 {
+    font-size: medium;
+}
+
 footer .small-text-rows {
     display: flex;
     flex-direction: column;
@@ -327,15 +331,10 @@ footer address {
     color: inherit;
 }
 
-:is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within):not(:has(.js-dropdown-btn::after:focus-within))) .dropdown-menu {
+:is(.js-dropdown.open, body:not(.supports-js) .js-dropdown:is(:hover, :focus-within)) .dropdown-menu {
     display: flex;
     visibility: visible;
     opacity: 1;
-}
-
-body:not(.supports-js) .js-dropdown:is(:hover,
-    :focus-within) .js-dropdown-btn::after {
-    content: "X";
 }
 
 button.js-dropdown-btn {

@@ -2,21 +2,16 @@
     --form-input-border-size: 1px;
     --form-input-padding-vertical: 0.5rem;
 
-    --form-label-required-symbol-color: red;
-    --form-label-focus-c-color: var(--primary-bg-color);
+    --form-primary-color: var(--primary-bg-color);
+    --form-primary-c-color: var(--primary-c-color);
+    --form-hover-primary-color: var(--hover-primary-bg-color);
 
-    --form-submit-btn-bg-color: rgb(4, 122, 4);
-    --form-submit-btn-hover-bg-color: rgb(5, 137, 5);
-    --form-submit-btn-c-color: white;
-
-    --form-reset-btn-bg-color: rgb(197, 4, 4);
-    --form-reset-btn-hover-bg-color: rgb(206, 21, 21);
-    --form-reset-btn-c-color: white;
+    --form-secondary-color: rgb(197, 4, 4);
+    --form-secondary-c-color: white;
+    --form-hover-secondary-color: rgb(206, 21, 21);
 
     --alert-success-bg-color: rgba(37, 149, 37, 0.5);
 
-    --loading-spinner-c-color: var(--primary-bg-color);
-    --loading-spinner-bg-color: var(--primary-c-color);
     --loading-spinner-backdrop-bg-color: rgba(0, 0, 0, 0.5);
 
     --map-aspect-ratio: 40/28;
@@ -97,6 +92,10 @@ main address .label {
 .map-container {
     aspect-ratio: var(--map-aspect-ratio);
     max-height: 30rem;
+}
+
+body:not(.supports-js) .map-container {
+    display: none;
 }
 
 .map {
@@ -184,7 +183,7 @@ form .field label {
 
 form .field:has(:is(input, textarea)[required]) label::before {
     content: "* ";
-    color: var(--form-label-required-symbol-color);
+    color: var(--form-secondary-color);
 }
 
 form .field:has(*:placeholder-shown) label {
@@ -197,7 +196,7 @@ form .field:has(*:placeholder-shown) label {
 
 form .field:has(*:focus) label {
     position: relative;
-    color: var(--form-label-focus-c-color);
+    color: var(--form-primary-color);
     transform: translateY(0);
     cursor: initial;
 }
@@ -229,21 +228,21 @@ form .field:has(*:focus) label {
 
 
 .form-controls input[type="submit"]:not(:disabled) {
-    background-color: var(--form-submit-btn-bg-color);
-    color: var(--form-submit-btn-c-color);
+    background-color: var(--form-primary-color);
+    color: var(--form-primary-c-color);
 }
 
 .form-controls input[type="submit"]:not(:disabled):hover {
-    background-color: var(--form-submit-btn-hover-bg-color);
+    background-color: var(--form-hover-primary-color);
 }
 
 .form-controls input[type="reset"]:not(:disabled) {
-    background-color: var(--form-reset-btn-bg-color);
-    color: var(--form-reset-btn-c-color);
+    background-color: var(--form-secondary-color);
+    color: var(--form-secondary-c-color);
 }
 
 .form-controls input[type="reset"]:not(:disabled):hover {
-    background-color: var(--form-reset-btn-hover-bg-color);
+    background-color: var(--form-hover-secondary-color);
 }
 
 .drop-zone {
@@ -301,8 +300,8 @@ form .field:has(*:focus) label {
     height: 56px;
     border-radius: 50%;
     border: 9px solid;
-    border-color: var(--loading-spinner-bg-color);
-    border-right-color: var(--loading-spinner-c-color);
+    border-color: var(--form-primary-color);
+    border-right-color: var(--form-primary-c-color);
     animation: spin 1s linear infinite;
 }
 
