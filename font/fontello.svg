@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2024 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="caret-down-fill" unicode="&#xf229;" d="M453 153l-300 344q-16 20-15 45t19 41 43 17h600q17 0 33-10t24-27 5-35-15-31l-300-344q-17-20-47-20t-47 20z" horiz-adv-x="1000" />
+
+<glyph glyph-name="list" unicode="&#xf479;" d="M157 100q0 13 8 22t22 8h626q14 0 22-8t8-22-8-22-22-8h-626q-14 0-22 8t-8 22z m0 250q0 13 8 22t22 8h626q14 0 22-8t8-22-8-22-22-8h-626q-14 0-22 8t-8 22z m0 250q0 13 8 22t22 8h626q14 0 22-8t8-22-8-22-22-8h-626q-14 0-22 8t-8 22z" horiz-adv-x="1000" />
+
+<glyph glyph-name="x-lg" unicode="&#xf659;" d="M133 670q-10 10-10 23t10 24 24 10 23-10l320-324 320 324q10 10 23 10t24-10 10-24-10-23l-324-320 324-320q10-10 10-23t-10-24-24-10-23 10l-320 324-320-324q-10-10-23-10t-24 10-10 24 10 23l324 320z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>

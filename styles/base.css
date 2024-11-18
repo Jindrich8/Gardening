@@ -1,5 +1,6 @@
 :root {
     --primary-bg-color: green;
+    --primary-dark-bg-color: #2d6a4f;
     --secondary-bg-color: white;
 
     --primary-c-color: white;
@@ -13,8 +14,6 @@
 
     --page-scrollbar-c-color: rgb(7, 95, 7);
     --page-scrollbar-bg-color: white;
-
-    --footer-bg-color: #2d6a4f;
 
     --hero-bg-color: rgba(20, 80, 20, 0.25);
 
@@ -229,7 +228,6 @@ header nav:has(#main-menu:popover-open)::before {
 /*#endregion header*/
 
 
-
 #hero {
     display: flex;
     flex-direction: column;
@@ -263,8 +261,8 @@ header nav:has(#main-menu:popover-open)::before {
 
 footer {
     overflow-x: auto;
-    background-color: var(--footer-bg-color);
-    color: white;
+    background-color: var(--primary-dark-bg-color);
+    color: var(--primary-c-color);
     padding: 16px 0;
     text-align: center;
 }
@@ -353,22 +351,6 @@ button.js-dropdown-btn {
 }
 
 /*#endregion dropdown*/
-
-@media only print {
-
-    header {
-        position: absolute;
-        contain: layout;
-    }
-
-    header nav::before {
-        opacity: 1;
-        top: -1px;
-        background-color: red;
-        transform: translateY(-50%);
-        background-color: var(--nav-bg-color);
-    }
-}
 
 .dropdown-menu {
     display: none;
@@ -624,6 +606,19 @@ button.js-dropdown-btn {
 
     #main-menu li a {
         height: auto;
+    }
+
+
+}
+
+@media only print {
+    header {
+        position: absolute;
+        top: 0;
+    }
+
+    footer {
+        page-break-inside: avoid;
     }
 
 

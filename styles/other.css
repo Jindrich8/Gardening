@@ -1,9 +1,11 @@
-#hero {
-    min-height: fit-content;
-    padding: var(--mobile-nav-height, 0) 0;
-    box-sizing: border-box;
-    text-align: center;
-    height: calc(100vw / 5);
+@media only screen {
+    #hero {
+        min-height: fit-content;
+        padding: var(--mobile-nav-height, 0) 0;
+        box-sizing: border-box;
+        text-align: center;
+        height: calc(100vw / 5);
+    }
 }
 
 .hero-text {
