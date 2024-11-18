@@ -129,7 +129,7 @@ nav :is(a, button):hover {
     transform: translate(1%, 1%);
 }
 
-nav a.current {
+nav :is(a, button).current {
     text-decoration: underline solid var(--primary-c-color) 0.1rem;
     text-underline-offset: 0.2rem;
 }
