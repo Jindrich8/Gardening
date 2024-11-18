@@ -9,8 +9,7 @@
     --hover-primary-bg-color: rgb(5, 137, 5);
     --hover-secondary-bg-color: rgb(236, 236, 236);
 
-    --mobile-nav-height: 5em;
-    --nav-bg-color: var(--primary-bg-color);
+    --nav-height: 5em;
 
     --page-scrollbar-c-color: rgb(7, 95, 7);
     --page-scrollbar-bg-color: white;
@@ -22,7 +21,7 @@
 
 html {
     scrollbar-color: var(--page-scrollbar-c-color) var(--page-scrollbar-bg-color);
-    scroll-padding-top: var(--mobile-nav-height);
+    scroll-padding-top: var(--nav-height);
     overflow-x: auto;
 }
 
@@ -80,7 +79,7 @@ main {
     flex-direction: row;
     justify-content: space-evenly;
     gap: min(max(1rem, 1vw), 20rem);
-    max-height: calc(100vh - var(--mobile-nav-height));
+    max-height: calc(100vh - var(--nav-height));
 }
 
 svg:has(use) {
@@ -148,7 +147,7 @@ header {
 }
 
 header nav {
-    height: var(--mobile-nav-height);
+    height: var(--nav-height);
 }
 
 #logo-item {
@@ -204,7 +203,7 @@ header nav::before {
     height: 100%;
     width: 100%;
     content: "";
-    background-color: var(--nav-bg-color);
+    background-color: var(--primary-bg-color);
     transform: translateY(-100%);
     animation: nav_bg_disappear 0.35s ease-in-out;
 }
@@ -587,7 +586,7 @@ button.js-dropdown-btn {
         overflow-y: auto;
         overflow-x: hidden;
         background-color: var(--primary-bg-color);
-        top: var(--mobile-nav-height);
+        top: var(--nav-height);
         width: 100%;
         font-size: inherit;
         animation: dropdown_mobile_close 0.175s ease-in-out;
