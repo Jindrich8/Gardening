@@ -16,7 +16,8 @@
 
     --hero-bg-color: rgba(8, 34, 8, 0.75);
 
-    --hero-overlay-bg: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.1));
+    --hero-overlay-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
+        radial-gradient(circle, rgba(0, 0, 0, 0.25) 10rem, rgba(0, 0, 0, 0.15) 15rem, rgba(0, 0, 0, 0) 100%);
 }
 
 html {
@@ -148,9 +149,15 @@ header {
 
 header nav {
     height: var(--nav-height);
-    overflow-x: auto;
-    overflow-y: hidden;
-    scrollbar-width: thin;
+}
+
+header nav>ul>li>:is(a, button) {
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transition: text-shadow 0.3s ease-in-out;
+}
+
+body:not(.scrolled) header nav>ul>li>:is(a, button) {
+    text-shadow: 2px 2px 4px black;
 }
 
 #logo-item {
@@ -202,7 +209,27 @@ header nav {
     }
 }
 
+body header nav::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    content: " ";
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0));
+    z-index: -1;
+    transform: translateY(-100%);
+    transition: transform 0.25s ease-in-out, opacity 0.1s ease-in-out;
+}
 
+body.scrolled header nav::after {
+    opacity: 0;
+}
+
+body:not(.scrolled) header nav::after {
+    opacity: 1;
+    transform: translateY(0);
+}
 
 header nav::before {
     z-index: -1;
@@ -259,8 +286,11 @@ header nav:has(#main-menu:popover-open)::before {
     padding: var(--nav-height, 0) 0;
 }
 
-#hero .text {
+#hero .text,
+#hero .text span {
     margin: auto;
+    text-shadow: 2px 2px 4.5px black,
+        0px 0px max(3.25rem, 25px) black;
 }
 
 

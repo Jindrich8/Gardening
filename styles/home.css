@@ -17,43 +17,45 @@ a.btn {
     color: inherit;
 }
 
-@media only screen {
-    .btn {
-        padding: 1rem 1%;
-        border: 0.15rem solid var(--primary-bg-color);
-        border-radius: 50%;
-        background-color: var(--primary-bg-color);
-        color: var(--primary-c-color);
-    }
+.btn {
+    padding: 1rem 1%;
+    border: 0.15rem solid var(--primary-bg-color);
+    border-radius: 50%;
+    background-color: var(--primary-bg-color);
+    color: var(--primary-c-color);
+}
 
-    .btn:hover {
-        translate: 1% 1%;
-    }
+.btn {
+    box-shadow: 1px 1px 2px black;
+}
+
+.btn:hover {
+    translate: 1% 1%;
+    box-shadow: 1px 2px 3px black;
+}
 
 
 
-    #hero {
-        min-height: fit-content;
-        box-sizing: border-box;
-    }
+#hero {
+    min-height: fit-content;
+    box-sizing: border-box;
+}
 
-    #hero-text {
-        display: flex;
-        color: var(--primary-c-color);
-        align-items: center;
-        text-align: center;
-        row-gap: 0.5rem;
-        margin: auto;
-        flex-direction: column;
-        width: fit-content;
-        max-width: 100%;
-        word-break: break-all;
-    }
+#hero-text {
+    display: flex;
+    color: var(--primary-c-color);
+    align-items: center;
+    text-align: center;
+    row-gap: 0.5rem;
+    margin: auto;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 100%;
+    word-break: break-all;
+}
 
-    #hero-text .btn {
-        width: fit-content;
-    }
-
+#hero-text .btn {
+    width: fit-content;
 }
 
 #services ul {
