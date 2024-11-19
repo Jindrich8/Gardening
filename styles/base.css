@@ -248,6 +248,7 @@ header nav:has(#main-menu:popover-open)::before {
     z-index: 1;
     color: var(--primary-c-color);
     background-color: var(--hero-bg-color);
+    padding: var(--nav-height, 0) 0;
 }
 
 #hero .text {
