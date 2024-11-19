@@ -1,5 +1,5 @@
 :root {
-    --primary-bg-color: green;
+    --primary-bg-color: rgb(0, 120, 0);
     --primary-dark-bg-color: #2a6349;
     --secondary-bg-color: white;
 
@@ -120,10 +120,12 @@ nav li a {
     height: 100%;
     width: 100%;
     box-sizing: border-box;
+    font-weight: 500;
 }
 
 nav li button {
     padding: 1rem;
+    font-weight: 500;
 }
 
 nav :is(a, button):hover {
@@ -152,7 +154,7 @@ header nav {
 }
 
 header nav>ul>li>:is(a, button) {
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
     transition: text-shadow 0.3s ease-in-out;
 }
 
