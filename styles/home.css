@@ -5,10 +5,6 @@
 
 #content {
     text-align: center;
-    margin: 2rem 0;
-    padding: 0 20px;
-    box-sizing: border-box;
-    width: 100%;
     max-width: 100vw;
 }
 

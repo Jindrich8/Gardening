@@ -1,20 +1,20 @@
 :root {
-    --primary-bg-color: rgb(0, 120, 0);
+    --primary-bg-color: #007800;
     --primary-dark-bg-color: #2a6349;
     --secondary-bg-color: white;
 
-    --primary-c-color: white;
-    --secondary-c-color: black;
+    --primary-c-color: #ffffff;
+    --secondary-c-color: #000000;
 
-    --hover-primary-bg-color: rgb(5, 137, 5);
-    --hover-secondary-bg-color: rgb(236, 236, 236);
+    --hover-primary-bg-color: #058905;
+    --hover-secondary-bg-color: #ececec;
 
     --nav-height: min(5rem, 25vh);
 
-    --page-scrollbar-c-color: rgb(7, 95, 7);
-    --page-scrollbar-bg-color: white;
+    --page-scrollbar-c-color: #075f07;
+    --page-scrollbar-bg-color: #ffffff;
 
-    --hero-bg-color: rgba(8, 34, 8, 0.75);
+    --hero-bg-color: #082208bf;
 
     --hero-overlay-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
         radial-gradient(circle, rgba(0, 0, 0, 0.25) 10rem, rgba(0, 0, 0, 0.15) 15rem, rgba(0, 0, 0, 0) 100%);
