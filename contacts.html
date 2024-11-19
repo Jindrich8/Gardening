@@ -89,14 +89,14 @@
                                 </div>
                             </address>
                             <div class="open-hours">
-                                <h3 class="header">Otevírací doba</h2>
-                                    <ul class="container">
-                                        <li><span>Pondělí: </span><span>9:00 - 15:00</span></li>
-                                        <li><span>Úterý: </span><span>9:00 - 15:00</span></li>
-                                        <li><span>Středa: </span><span>9:00 - 15:00</span></li>
-                                        <li><span>Čtvrtek: </span><span>9:00 - 15:00</span></li>
-                                        <li><span>Pátek: </span><span>9:00 - 15:00</span></li>
-                                    </ul>
+                                <h3 class="header">Otevírací doba</h3>
+                                <ul class="container">
+                                    <li><span>Pondělí: </span><span>9:00 - 15:00</span></li>
+                                    <li><span>Úterý: </span><span>9:00 - 15:00</span></li>
+                                    <li><span>Středa: </span><span>9:00 - 15:00</span></li>
+                                    <li><span>Čtvrtek: </span><span>9:00 - 15:00</span></li>
+                                    <li><span>Pátek: </span><span>9:00 - 15:00</span></li>
+                                </ul>
                             </div>
                         </div>
                         <div class="map-container">
@@ -117,8 +117,9 @@
                     </div>
                     <h2 class="header">Kontaktní formulář</h2>
                     <div class="form-wrapper">
-                        <form class="contact-form no-action" data-js-loading-id="c-form-loading"
-                            data-js-alert-id="c-form-alert" id="contact-form" method="post" action="#">
+                        <form class="contact-form no-action" data-js-loading-id="c-form-loading" aria-live="polite"
+                            aria-busy="false" data-js-alert-id="c-form-alert" id="contact-form" method="post"
+                            action="#">
                             <div class="row">
                                 <div class="field">
                                     <label for="c-form-email">Email:</label>
@@ -151,8 +152,7 @@
                                     <div class="file-input dropzone" data-name="files">
                                         <div class="js-hidden-file-input-wrapper hidden"></div>
                                         <div class="fallback">
-                                            <input id="c-form-attachements" type="file" placeholder="Vyber soubor..."
-                                                multiple>
+                                            <input id="c-form-attachements" type="file" multiple>
                                         </div>
                                     </div>
                                 </div>
@@ -162,7 +162,7 @@
                                 <input type="reset" class="btn" value="Resetovat">
                             </div>
                         </form>
-                        <div class="loading hidden" id="c-form-loading" aria-label="Načítání">
+                        <div class="loading hidden" id="c-form-loading">
                             <div class="backdrop">
                                 <div class="spinner">
                                 </div>

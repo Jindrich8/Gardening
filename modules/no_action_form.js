@@ -23,12 +23,15 @@ document.querySelectorAll('form.no-action').forEach(f => {
                     loading = document.getElementById(loadingId);
                     if (loading != null) {
                         loading.classList.remove('hidden');
+
                     }
                 }
+                f.ariaBusy = true;
                 setTimeout(() => {
                     if (loading != null) {
                         loading.classList.add('hidden');
                     }
+                    f.ariaBusy = false;
                     alert.classList.remove('hidden');
                     message.textContent = "Zpráva byla úspěšně odeslána.";
                     disableControls(false);
