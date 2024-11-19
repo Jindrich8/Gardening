@@ -9,7 +9,7 @@
     --hover-primary-bg-color: rgb(5, 137, 5);
     --hover-secondary-bg-color: rgb(236, 236, 236);
 
-    --nav-height: 5em;
+    --nav-height: min(5rem, 25vh);
 
     --page-scrollbar-c-color: rgb(7, 95, 7);
     --page-scrollbar-bg-color: white;
@@ -148,12 +148,17 @@ header {
 
 header nav {
     height: var(--nav-height);
+    overflow-x: auto;
+    overflow-y: hidden;
+    scrollbar-width: thin;
 }
 
 #logo-item {
     max-height: 100%;
-    margin: 1lh min(1lh, 25px);
-    flex-shrink: 0;
+    margin: calc(var(--nav-height) * 0.1) min(1lh, 25px);
+    flex-shrink: 1;
+    min-width: 50px;
+    box-sizing: border-box;
 }
 
 #logo-item:hover {
@@ -166,6 +171,9 @@ header nav {
 }
 
 #logo-item .img-container img {
+    aspect-ratio: 1 / 1;
+    height: 100%;
+    width: 100%;
     object-fit: contain;
     object-position: center;
 }
@@ -542,7 +550,8 @@ button.js-dropdown-btn {
         opacity: 1;
         z-index: 1;
         float: right;
-        font-size: 4em;
+        font-size: var(--nav-height);
+        line-height: 0;
     }
 
     #hamburger-btn {
@@ -551,7 +560,16 @@ button.js-dropdown-btn {
         color: white;
         background-color: transparent;
         border: none;
-        font-size: 100%;
+        line-height: inherit;
+        max-height: 100%;
+        font-size: 1em;
+        box-sizing: border-box;
+    }
+
+    #hamburger-btn .list-icon,
+    .close-icon {
+        display: block;
+        line-height: inherit;
     }
 
     #hamburger-btn .close-icon {
