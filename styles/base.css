@@ -18,6 +18,8 @@
 
     --hero-overlay-bg: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.1)),
         radial-gradient(circle, rgba(0, 0, 0, 0.25) 10rem, rgba(0, 0, 0, 0.15) 15rem, rgba(0, 0, 0, 0) 100%);
+
+    --dropdown-menu-overlap: 0.75rem;
 }
 
 html {
@@ -431,16 +433,20 @@ button.js-dropdown-btn {
         }
     }
 
+    #main-menu>.js-dropdown>.dropdown-menu {
+        max-height: calc(100vh - var(--nav-height) + var(--dropdown-menu-overlap));
+    }
 
     .dropdown-menu {
         display: none;
         position: absolute;
         background-color: var(--secondary-bg-color);
         width: max-content;
-        top: calc(100% - 0.75rem);
+        top: calc(100% - var(--dropdown-menu-overlap));
         right: 50%;
         color: var(--secondary-c-color);
         animation: dropdown_close 0.15s ease-in-out;
+        overflow-y: auto;
 
     }
 
