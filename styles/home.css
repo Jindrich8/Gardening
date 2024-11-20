@@ -30,11 +30,8 @@ a.btn {
     box-shadow: 1px 2px 3px black;
 }
 
-
-
 #hero {
-    min-height: fit-content;
-    box-sizing: border-box;
+    min-height: 70vh;
 }
 
 #hero-text {
@@ -127,4 +124,10 @@ section .header {
 
 section:not(:last-of-type) {
     margin-bottom: 1lh;
+}
+
+@media only screen and (width > 700px) and (width > 40rem) {
+    #hero {
+        min-height: 100vh;
+    }
 }

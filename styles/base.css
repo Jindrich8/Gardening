@@ -97,6 +97,7 @@ svg:has(use) {
 nav {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     color: var(--primary-c-color);
     text-align: center;
@@ -167,6 +168,7 @@ body:not(.scrolled) header nav>ul>li>:is(a, button) {
     margin: calc(var(--nav-height) * 0.1) min(1lh, 25px);
     flex-shrink: 1;
     min-width: 50px;
+    width: min-content;
     box-sizing: border-box;
 }
 
@@ -263,7 +265,6 @@ header nav:has(#main-menu:popover-open)::before {
 
 /*#endregion header*/
 
-
 #hero {
     display: flex;
     flex-direction: column;
@@ -274,18 +275,18 @@ header nav:has(#main-menu:popover-open)::before {
             url("../resources/hero/1075.webp")1.5x,
             url("../resources/hero/700.webp") 1x,
             url("../resources/hero/425.webp") 0.6x);
-    height: calc(100vw / 7 * 4);
     min-height: fit-content;
-    max-height: 100vh;
     background-position: center, center;
     background-repeat: no-repeat, no-repeat;
     background-size: cover;
     position: relative;
     overflow-x: auto;
     z-index: 1;
+    text-align: center;
     color: var(--primary-c-color);
     background-color: var(--hero-bg-color);
     padding: var(--nav-height, 0) 0;
+    box-sizing: border-box;
 }
 
 #hero .text,
