@@ -71,8 +71,13 @@ const handleDropdownClose = () => {
     }
 };
 
+/**
+ * 
+ * @param {HTMLElement} e 
+ * @returns {boolean}
+ */
 function dropdownShouldStayOpen(e) {
-    return e instanceof HTMLElement && (e === document.activeElement || !device.isTouch() && e.matches(':hover'));
+    return (e === document.activeElement || !device.isTouch() && e.matches(':hover'));
 }
 
 
