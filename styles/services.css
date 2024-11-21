@@ -12,8 +12,6 @@
     height: 100%;
 }
 
-
-
 #content img::before {
     display: block;
     content: " ";

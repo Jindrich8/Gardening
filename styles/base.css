@@ -135,6 +135,10 @@ nav :is(a, button):hover {
     transform: translate(1%, 1%);
 }
 
+nav a:active {
+    font-weight: bold;
+}
+
 nav :is(a, button).current {
     text-decoration: underline solid var(--primary-c-color) 0.1rem;
     text-underline-offset: 0.2rem;
@@ -160,6 +164,7 @@ header nav>ul>li>:is(a, button) {
     text-shadow: 0 0 4px rgba(0, 0, 0, 0.75);
     transition: text-shadow 0.3s ease-in-out;
 }
+
 
 body:not(.scrolled) header nav>ul>li>:is(a, button) {
     text-shadow: 2px 2px 4px black;
@@ -398,6 +403,7 @@ button.js-dropdown-btn {
     display: none;
     flex-direction: column;
     padding: 0.1rem;
+    overflow-x: hidden;
 }
 
 @media only screen and (width > 700px) and (width > 40rem) {
